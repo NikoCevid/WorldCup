@@ -1,0 +1,94 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio cache files
+.vs/
+.vscode/
+
+## Auto-generated files
+Generated\ Files/
+*.g.cs
+*.g.i.cs
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+## Other
+*.dbmdl
+*.pdb
+*.cache
+*.bak
+*.tmp
+*.log
+*.sqlite
+*.sdf
+
+## Configuration files
+appsettings.Development.json
+appsettings.Local.json
+
+## Rider
+.idea/
+*.sln.iml
+
+## DotCover
+*.dotCover
+
+## Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+## Local publish
+.publish/
+
+## JetBrains Rider
+.idea/
+
+## User-specific files (Mac/Linux)
+*.DS_Store
+
+## Git Ignore for ClickOnce
+publish/
+
+## Backup files
+*~*
+*.bak
+*.old
+*.orig
+*.tmp
+
+## Entity Framework
+Migrations/
+

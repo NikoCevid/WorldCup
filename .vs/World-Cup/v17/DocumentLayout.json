@@ -1,98 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\World-Cup\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\World-Cup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\descriptionconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\descriptionconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\repo\\repofactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\repo\\repofactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\typeofeventconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\typeofeventconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\repo\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\repo\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\enums\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\repo\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\repo\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\enums\\typeofevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\typeofevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\repo\\filerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\repo\\filerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\models\\matchdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\matchdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\models\\startingeleven.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\startingeleven.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\models\\teamevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\teamevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\models\\teamstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\teamstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\models\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\timeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\timeconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\statusconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\statusconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\stagenameconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\stagenameconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\tacticsconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\tacticsconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\positionconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\positionconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\parsestringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\parsestringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\converters\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\converters\\converter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\enums\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\enums\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\enums\\stagename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\stagename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\enums\\tactics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\tactics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\source\\repos\\world-cup\\data\\enums\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|C:\\Users\\User\\source\\repos\\World-Cup\\winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\repo\\apirepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\repo\\apirepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,283 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DescriptionConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\DescriptionConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\DescriptionConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\DescriptionConverter.cs",
-              "RelativeToolTip": "Data\\Converters\\DescriptionConverter.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACsAAAANAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DataService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\DataService.cs",
+              "RelativeDocumentMoniker": "Data\\Repo\\DataService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\DataService.cs",
+              "RelativeToolTip": "Data\\Repo\\DataService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:42:55.29Z",
+              "WhenOpened": "2025-05-03T18:14:21.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TimeConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\TimeConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\TimeConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\TimeConverter.cs",
-              "RelativeToolTip": "Data\\Converters\\TimeConverter.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwCsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FileRepo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\FileRepo.cs",
+              "RelativeDocumentMoniker": "Data\\Repo\\FileRepo.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\FileRepo.cs",
+              "RelativeToolTip": "Data\\Repo\\FileRepo.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:42:28.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StatusConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\StatusConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\StatusConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\StatusConverter.cs",
-              "RelativeToolTip": "Data\\Converters\\StatusConverter.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:42:07.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "StageNameConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\StageNameConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\StageNameConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\StageNameConverter.cs",
-              "RelativeToolTip": "Data\\Converters\\StageNameConverter.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAqwEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:41:40.935Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TacticsConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\TacticsConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\TacticsConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\TacticsConverter.cs",
-              "RelativeToolTip": "Data\\Converters\\TacticsConverter.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAqwFoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:40:58.337Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PositionConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\PositionConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\PositionConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\PositionConverter.cs",
-              "RelativeToolTip": "Data\\Converters\\PositionConverter.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAqwD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:40:35.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TypeOfEventConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\TypeOfEventConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\TypeOfEventConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\TypeOfEventConverter.cs",
-              "RelativeToolTip": "Data\\Converters\\TypeOfEventConverter.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAwFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:40:06.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ParseStringConverter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\ParseStringConverter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\ParseStringConverter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\ParseStringConverter.cs",
-              "RelativeToolTip": "Data\\Converters\\ParseStringConverter.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:39:41.535Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Converter.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\Converter.cs",
-              "RelativeDocumentMoniker": "Data\\Converters\\Converter.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Converters\\Converter.cs",
-              "RelativeToolTip": "Data\\Converters\\Converter.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:39:26.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Description.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Description.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Description.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Description.cs",
-              "RelativeToolTip": "Data\\Enums\\Description.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:39:04.139Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Time.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Time.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Time.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Time.cs",
-              "RelativeToolTip": "Data\\Enums\\Time.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:38:40.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Status.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Status.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Status.cs",
-              "RelativeToolTip": "Data\\Enums\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:38:28.734Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "StageName.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\StageName.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\StageName.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\StageName.cs",
-              "RelativeToolTip": "Data\\Enums\\StageName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:38:06.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Tactics.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Tactics.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Tactics.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Tactics.cs",
-              "RelativeToolTip": "Data\\Enums\\Tactics.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:37:44.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Position.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Position.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Position.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\Position.cs",
-              "RelativeToolTip": "Data\\Enums\\Position.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:37:14.434Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Weather.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\Weather.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\Weather.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\Weather.cs",
-              "RelativeToolTip": "Data\\Models\\Weather.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAYwB4AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:36:43.606Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StartingEleven.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\StartingEleven.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\StartingEleven.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\StartingEleven.cs",
-              "RelativeToolTip": "Data\\Models\\StartingEleven.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wBYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:36:22.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TeamStatistics.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\TeamStatistics.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\TeamStatistics.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\TeamStatistics.cs",
-              "RelativeToolTip": "Data\\Models\\TeamStatistics.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAkwA0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:35:40.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TeamEvent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\TeamEvent.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\TeamEvent.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\TeamEvent.cs",
-              "RelativeToolTip": "Data\\Models\\TeamEvent.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:35:16.811Z"
+              "WhenOpened": "2025-05-02T22:22:31.591Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MatchDetail.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\MatchDetail.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\MatchDetail.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\MatchDetail.cs",
-              "RelativeToolTip": "Data\\Models\\MatchDetail.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAwEwAAAAuAAAAAAAAAA==",
+              "Title": "APIRepo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\APIRepo.cs",
+              "RelativeDocumentMoniker": "Data\\Repo\\APIRepo.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\APIRepo.cs",
+              "RelativeToolTip": "Data\\Repo\\APIRepo.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:34:47.299Z"
+              "WhenOpened": "2025-05-02T22:20:58.013Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TypeOfEvent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\TypeOfEvent.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\TypeOfEvent.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Enums\\TypeOfEvent.cs",
-              "RelativeToolTip": "Data\\Enums\\TypeOfEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACDAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RepoFactory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\RepoFactory.cs",
+              "RelativeDocumentMoniker": "Data\\Repo\\RepoFactory.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\RepoFactory.cs",
+              "RelativeToolTip": "Data\\Repo\\RepoFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:30:25.136Z"
+              "WhenOpened": "2025-05-02T22:09:43.273Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Team.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\Team.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\Team.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Models\\Team.cs",
-              "RelativeToolTip": "Data\\Models\\Team.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwDcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IRepo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\IRepo.cs",
+              "RelativeDocumentMoniker": "Data\\Repo\\IRepo.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\IRepo.cs",
+              "RelativeToolTip": "Data\\Repo\\IRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:23:56.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\World-Cup\\WinFormsApp\\Form1.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\World-Cup\\WinFormsApp\\Form1.cs [Design]",
-              "RelativeToolTip": "WinFormsApp\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T15:21:42.733Z"
+              "WhenOpened": "2025-05-02T21:57:28.231Z",
+              "EditorCaption": ""
             }
           ]
         }

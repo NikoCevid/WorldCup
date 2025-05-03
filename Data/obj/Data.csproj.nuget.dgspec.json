@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Data.csproj": {}
+    "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Data.csproj": {
+    "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\World-Cup\\Data\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[112.1.0, )"
             }
           },
           "imports": [
