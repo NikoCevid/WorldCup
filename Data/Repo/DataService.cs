@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Data;
 
 namespace Data
 {
@@ -13,7 +14,7 @@ namespace Data
         {
             try
             {
-                repo = RepoFactory.CreateRepo(sourceType);
+                repo = RepoFactory.CreateRepo();
             }
             catch (Exception ex)
             {
@@ -36,5 +37,6 @@ namespace Data
                 return (new List<Team>(), new List<MatchDetail>());
             }
         }
+
     }
 }

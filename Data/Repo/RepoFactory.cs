@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
 
-
 namespace Data
 {
     public static class RepoFactory
     {
         private const string CONFIG_PATH = "config/config.txt"; // relativna putanja
 
+        // Postojeća metoda koja čita iz config.txt
         public static IRepo CreateRepo()
         {
             if (!File.Exists(CONFIG_PATH))
@@ -20,6 +20,21 @@ namespace Data
             string mode = lines[0].Trim().ToLower(); // api ili file
             string championship = lines[1].Trim().ToLower(); // men ili women
 
+            return CreateRepo(mode, championship);
+        }
+
+        // ✅ Nova metoda koja prima sourceType, defaulta championship na "men"
+        public static IRepo CreateRepo(string sourceType)
+        {
+            string mode = sourceType.Trim().ToLower();
+            string championship = "men"; // default
+
+            return CreateRepo(mode, championship);
+        }
+
+        // ✅ Interna metoda koja prihvaća oba parametra
+        private static IRepo CreateRepo(string mode, string championship)
+        {
             switch (mode)
             {
                 case "api":
@@ -31,7 +46,7 @@ namespace Data
                     return new FileRepo(matchesFile, teamsFile);
 
                 default:
-                    throw new InvalidOperationException("Nepoznat nacin ucitavanja. Dozvoljeno: api ili file.");
+                    throw new InvalidOperationException("Nepoznat nacin učitavanja. Dozvoljeno: api ili file.");
             }
         }
     }

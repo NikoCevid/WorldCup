@@ -1,32 +1,37 @@
-using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 using System.Windows.Forms;
-using Data; // pretpostavka: DataService je u ovom namespace-u
+using Data;
 
 namespace WinFormsApp
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // Uèitaj konfiguraciju iz appsettings.json
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            try
+            {
+                string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config", "config.txt");
 
-            var configuration = builder.Build();
-            string dataSource = configuration["DataSource"] ?? "API";
+                if (!File.Exists(configPath))
+                    throw new FileNotFoundException("Nedostaje konfiguracijska datoteka: " + configPath);
 
-            // Inicijaliziraj podatkovni sloj
-            var dataService = new DataService(dataSource);
+                string[] lines = File.ReadAllLines(configPath);
+                if (lines.Length < 1)
+                    throw new InvalidOperationException("Konfiguracijska datoteka mora imati barem jednu liniju (sourceType).");
 
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1(dataService)); // pretpostavka: Form1 ima konstruktor koji prima DataService
+                string sourceType = lines[0].Trim(); // "api" ili "file"
+
+                var dataService = new DataService(sourceType); 
+
+                ApplicationConfiguration.Initialize();
+                Application.Run(new StartupForm(dataService)); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Greška pri pokretanju aplikacije:\n{ex.Message}", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

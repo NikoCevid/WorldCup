@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "X0pubPyaU0k=",
+  "dgSpecHash": "M2xYdpDJ3VY=",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\WinFormsApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.4\\microsoft.extensions.configuration.9.0.4.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.4\\microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.4\\microsoft.extensions.primitives.9.0.4.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\restsharp\\112.1.0\\restsharp.112.1.0.nupkg.sha512"
   ],
   "logs": []
 }
