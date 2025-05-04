@@ -1,35 +1,40 @@
 ﻿using Data.Models;
-using Data;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-public class DataService
+namespace Data
 {
-    private readonly IRepo repo;
-
-    public DataService()
+    public class DataService
     {
-        try
-        {
-            repo = RepoFactory.CreateRepo();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Greška pri učitavanju izvora podataka: " + ex.Message);
-            throw;
-        }
-    }
+        private readonly IRepo repo;
 
-    public async Task<(List<Team> teams, List<MatchDetail> matchDetails)> GetMatchDataAsync()
-    {
-        try
+        public DataService(string sourceType)
         {
-            var teams = await repo.GetAllTeamsAsync();
-            var matchDetails = await repo.GetAllMatchDetailsAsync();
-            return (teams, matchDetails);
+            try
+            {
+                repo = RepoFactory.CreateRepo(sourceType);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Greška pri učitavanju izvora podataka: " + ex.Message);
+                throw;
+            }
         }
-        catch (Exception ex)
+
+        public async Task<(List<Team> teams, List<MatchDetail> matchDetails)> GetMatchDataAsync()
         {
-            Console.WriteLine("Greška pri dohvaćanju podataka: " + ex.Message);
-            return (new List<Team>(), new List<MatchDetail>());
+            try
+            {
+                var teams = await repo.GetAllTeamsAsync();
+                var matchDetails = await repo.GetAllMatchDetailsAsync();
+                return (teams, matchDetails);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Greška pri dohvaćanju podataka: " + ex.Message);
+                return (new List<Team>(), new List<MatchDetail>());
+            }
         }
     }
 }

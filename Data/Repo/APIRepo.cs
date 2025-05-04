@@ -13,6 +13,7 @@ public class APIRepo : IRepo
 
     public async Task<List<Team>> GetAllTeamsAsync()
     {
+       
         var client = new RestClient(_baseUrl + "teams/results");
         var response = await client.ExecuteAsync(new RestRequest());
         return response.IsSuccessful
