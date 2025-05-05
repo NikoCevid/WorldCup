@@ -7,23 +7,30 @@ namespace Data
     {
         private const string CONFIG_PATH = "config/config.txt"; // relativna putanja
 
+        public static string Language { get; private set; } = "en"; // dostupno izvana ako treba
+
         // Postojeća metoda koja čita iz config.txt
         public static IRepo CreateRepo()
         {
+            // Ako config ne postoji, kreiraj ga sa default vrijednostima
             if (!File.Exists(CONFIG_PATH))
-                throw new FileNotFoundException("Konfiguracijska datoteka nije pronađena: " + CONFIG_PATH);
+            {
+                File.WriteAllLines(CONFIG_PATH, new string[] { "api", "men", "en" }); // default: API, muško prvenstvo, engleski jezik
+                Directory.CreateDirectory(Path.GetDirectoryName(CONFIG_PATH));
+            }
 
             string[] lines = File.ReadAllLines(CONFIG_PATH);
             if (lines.Length < 2)
                 throw new InvalidOperationException("Datoteka mora imati barem 2 linije: način i prvenstvo.");
 
-            string mode = lines[0].Trim().ToLower(); // api ili file
+            string mode = lines[0].Trim().ToLower();       // api ili file
             string championship = lines[1].Trim().ToLower(); // men ili women
+            Language = lines.Length > 2 ? lines[2].Trim().ToLower() : "en"; // en ili hr
 
             return CreateRepo(mode, championship);
         }
 
-        // ✅ Nova metoda koja prima sourceType, defaulta championship na "men"
+        // Nova metoda koja prima sourceType, defaulta championship na "men"
         public static IRepo CreateRepo(string sourceType)
         {
             string mode = sourceType.Trim().ToLower();
@@ -32,7 +39,7 @@ namespace Data
             return CreateRepo(mode, championship);
         }
 
-        // ✅ Interna metoda koja prihvaća oba parametra
+        // Interna metoda koja prihvaća oba parametra
         private static IRepo CreateRepo(string mode, string championship)
         {
             switch (mode)

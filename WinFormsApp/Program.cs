@@ -8,6 +8,8 @@ namespace WinFormsApp
     internal static class Program
     {
         [STAThread]
+
+
         static void Main()
         {
             try
@@ -26,12 +28,16 @@ namespace WinFormsApp
                 var dataService = new DataService(sourceType); 
 
                 ApplicationConfiguration.Initialize();
-                Application.Run(new StartupForm(dataService)); 
+                Application.Run(new StartupForm(dataService));
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Greška pri pokretanju aplikacije:\n{ex.Message}", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
+
+     
+
     }
 }

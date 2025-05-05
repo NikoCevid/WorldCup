@@ -1,61 +1,87 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using System.IO;
-using Data;
 
 namespace WinFormsApp
 {
     public partial class StartupForm : Form
     {
-        private const string SettingsFile = "config.txt";
-        private readonly DataService _dataService;
+        private const string SettingsFilePath = "settings.txt";
+        private const string ConfigFilePath = "config/config.txt";
 
-        public StartupForm(DataService dataService)
+        public string SelectedChampionship => cmbChampionship.SelectedItem?.ToString();
+        public string SelectedLanguage => cmbLanguage.SelectedItem?.ToString();
+
+        public StartupForm(Data.DataService dataService)
         {
             InitializeComponent();
-            _dataService = dataService;
-            LoadPreviousSettings();
-        }
 
-        private void LoadPreviousSettings()
-        {
-            if (File.Exists(SettingsFile))
+            if (File.Exists(SettingsFilePath))
             {
-                var lines = File.ReadAllLines(SettingsFile);
-                if (lines.Length >= 2)
+                string[] lines = File.ReadAllLines(SettingsFilePath);
+                if (lines.Length == 2)
                 {
-                    cmbTournament.SelectedItem = lines[0];
-                    cmbLanguage.SelectedItem = lines[1];
+                    ApplyCulture(lines[1]);
+                    // Ako ne želiš da aplikacija odmah ide dalje, izbriši Close() i omogući ponovno biranje.
+                    // Close();
                 }
             }
+
+            LoadSettingsOptions();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void LoadSettingsOptions()
         {
-            if (cmbTournament.SelectedItem == null || cmbLanguage.SelectedItem == null)
+            cmbChampionship.Items.AddRange(new string[] { "Men", "Women" });
+            cmbChampionship.SelectedIndex = 0;
+
+            cmbLanguage.Items.AddRange(new string[] { "en", "hr" });
+            cmbLanguage.SelectedIndex = 0;
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            if (cmbChampionship.SelectedItem == null || cmbLanguage.SelectedItem == null)
             {
-                MessageBox.Show("Odaberite prvenstvo i jezik.", "Upozorenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select both championship and language.");
                 return;
             }
 
-            string selectedTournament = cmbTournament.SelectedItem.ToString();
-            string selectedLanguage = cmbLanguage.SelectedItem.ToString();
+            string championship = cmbChampionship.SelectedItem.ToString().ToLower();
+            string language = cmbLanguage.SelectedItem.ToString().ToLower();
+            string mode = "api"; // fiksno
 
-            File.WriteAllLines(SettingsFile, new[] { selectedTournament, selectedLanguage });
+            // Spremanje postavki u settings.txt
+            File.WriteAllLines(SettingsFilePath, new string[] { championship, language });
 
-            Thread.CurrentThread.CurrentUICulture = selectedLanguage == "Hrvatski"
-                ? new CultureInfo("hr")
-                : new CultureInfo("en");
+            //// Spremanje u config/config.txt za RepoFactory
+            Directory.CreateDirectory(Path.GetDirectoryName(ConfigFilePath));
+            File.WriteAllLines(ConfigFilePath, new string[] { mode, championship, language });
 
-            this.Hide();
-            var mainForm = new StartupForm(_dataService); // ✅ otvaramo stvarnu glavnu formu
-            mainForm.FormClosed += (s, args) => this.Close();
-            mainForm.Show();
+            ApplyCulture(language);
+
+            MessageBox.Show("Settings saved. Load your main form here.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Kada imaš glavnu formu, koristi ovo:
+            // Hide();
+            // var mainForm = new MainCountryForm(); // ili kako se zove tvoja glavna forma
+            // mainForm.Show();
+
+            Close();
         }
 
-        private void StartupForm_Load(object sender, EventArgs e)
+        private void ApplyCulture(string langCode)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(langCode);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(langCode);
         }
+
+        private void lbChampionship_Click(object sender, EventArgs e) { }
+        private void cmbChampionship_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void lbLanguage_Click(object sender, EventArgs e) { }
+        private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e) { }
     }
 }
