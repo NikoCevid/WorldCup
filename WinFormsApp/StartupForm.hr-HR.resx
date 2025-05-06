@@ -124,10 +124,10 @@
   <data name="lbChampionship.TextAlign" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="lbLanguage.Anchor" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lbLanguage.Text" xml:space="preserve">
     <value>Izaberi jezik</value>
+  </data>
+  <data name="lbLanguage.Anchor" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
 </root>

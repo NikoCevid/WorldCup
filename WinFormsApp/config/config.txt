@@ -1,3 +1,2 @@
-api
-men
-hr
+source=api
+gender=men
