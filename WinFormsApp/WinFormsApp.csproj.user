@@ -4,6 +4,9 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PlayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="StartupForm.cs">
       <SubType>Form</SubType>
     </Compile>

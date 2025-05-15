@@ -1,69 +1,114 @@
-﻿using Data.Models;
+﻿using Data;
+using Data.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp.Helpers;
 
 namespace WinFormsApp
 {
     public partial class MainForm : Form
     {
-        private AppConfig config;
+        private IRepo repo;
+        private string selectedFifaCode;
+        private const string SettingsFile = "settings.txt";
+        private const string FavPlayersFile = "favPlayers.txt";
+        private List<MatchDetail> matchList;
+        private StartingEleven selectedPlayer;
 
         public MainForm()
         {
             InitializeComponent();
+            LoadAsync();
         }
 
-        private List<MatchDetail> matchList;
-
-        private void MainForm_Load(object sender, EventArgs e)
+        private async void LoadAsync()
         {
-            string path = "putanja/do/tvoje/datoteke.json"; // Promijeni u stvarnu putanju
-            string json = File.ReadAllText(path);
-            matchList = JsonConvert.DeserializeObject<List<MatchDetail>>(json);
-
-            var representations = matchList
-                .Select(m => m.HomeTeamCountry)
-                .Distinct()
-                .ToList();
-
-            cmbRepresentation.DataSource = representations;
-        }
-        private void lblPlayers_Click(object sender, EventArgs e)
-        {
-
+            repo = RepoFactory.CreateRepo();
+            await LoadMatchDataAsync();
+            await LoadTeamsAsync();
+            LoadFavPlayers();
         }
 
-        private void lblFavPlayers_Click(object sender, EventArgs e)
+        private async Task LoadMatchDataAsync()
         {
-
+            matchList = await repo.GetAllMatchDetailsAsync();
         }
 
-        private void lblPlayer_Click(object sender, EventArgs e)
+        private async Task LoadTeamsAsync()
         {
+            var teams = await repo.GetAllTeamsAsync();
+            cmbRepresentation.Items.Clear();
 
+            foreach (var team in teams.OrderBy(t => t.Country))
+            {
+                cmbRepresentation.Items.Add($"{team.Country} ({team.FifaCode})");
+            }
+
+            LoadFavouriteTeam();
         }
 
-        private void pnlPlayers_Paint(object sender, PaintEventArgs e)
+        private void LoadFavouriteTeam()
         {
+            if (File.Exists(SettingsFile))
+            {
+                selectedFifaCode = File.ReadAllText(SettingsFile);
+                var item = cmbRepresentation.Items
+                    .Cast<string>()
+                    .FirstOrDefault(i => i.Contains($"({selectedFifaCode})"));
 
+                if (item != null)
+                {
+                    cmbRepresentation.SelectedItem = item;
+                }
+            }
         }
 
-        private void pnlFavPlayers_Paint(object sender, PaintEventArgs e)
+        private async void cmbRepresentation_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbRepresentation.SelectedItem == null) return;
 
+            var selectedText = cmbRepresentation.SelectedItem.ToString();
+            selectedFifaCode = selectedText.Substring(selectedText.LastIndexOf('(') + 1, 3);
+            File.WriteAllText(SettingsFile, selectedFifaCode);
+
+            var teams = await repo.GetAllTeamsAsync();
+            var selectedCountry = teams.FirstOrDefault(t => t.FifaCode == selectedFifaCode)?.Country;
+            if (selectedCountry == null) return;
+
+            var match = matchList
+                .FirstOrDefault(m => m.HomeTeamCountry == selectedCountry || m.AwayTeamCountry == selectedCountry);
+
+            if (match == null) return;
+
+            var players = match.HomeTeamCountry == selectedCountry
+                ? match.HomeTeamStatistics.StartingEleven.Union(match.HomeTeamStatistics.Substitutes).ToList()
+                : match.AwayTeamStatistics.StartingEleven.Union(match.AwayTeamStatistics.Substitutes).ToList();
+
+            pnlPlayers.Controls.Clear();
+
+            foreach (var player in players)
+            {
+                var control = new PlayerControl(player, isFavourite: false);
+                control.Click += (s, ev) => SelectPlayer(player);
+                pnlPlayers.Controls.Add(control);
+            }
         }
 
-        private void pnlPlayer_Paint(object sender, PaintEventArgs e)
+        private void SelectPlayer(StartingEleven player)
         {
-
+            selectedPlayer = player;
+            lblName.Text = player.Name;
+            lblShirt.Text = player.ShirtNumber.ToString();
+            lblPosition.Text = player.Position.ToString();
+            lblCaptain.Text = player.Captain ? "Da" : "Ne";
+            lblFavPlayer.Text = "Nije dodan";
+            pictureBox.Image = null;
         }
 
         private void btnTransfer_Click(object sender, EventArgs e)
@@ -73,7 +118,7 @@ namespace WinFormsApp
             foreach (Control ctrl in pnlFavPlayers.Controls)
             {
                 if (ctrl is Label lbl && lbl.Text == selectedPlayer.Name)
-                    return; // Već postoji
+                    return;
             }
 
             Label favLabel = new Label
@@ -93,6 +138,8 @@ namespace WinFormsApp
 
             pnlFavPlayers.Controls.Add(favLabel);
             lblFavPlayer.Text = "Omiljeni igrač";
+
+            SaveFavPlayers();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -103,6 +150,7 @@ namespace WinFormsApp
                 {
                     pnlFavPlayers.Controls.Remove(ctrl);
                     lblFavPlayer.Text = "Nije dodan";
+                    SaveFavPlayers();
                     break;
                 }
             }
@@ -111,101 +159,66 @@ namespace WinFormsApp
         private void btnPicutre_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog
-    {
-        Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"
-    };
-
-    if (ofd.ShowDialog() == DialogResult.OK)
-    {
-        pictureBox.Image = Image.FromFile(ofd.FileName);
-    }
-        }
-
-        private void cmbRepresentation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedTeam = cmbRepresentation.SelectedItem.ToString();
-
-            var match = matchList
-                .FirstOrDefault(m => m.HomeTeamCountry == selectedTeam || m.AwayTeamCountry == selectedTeam);
-
-            var players = match?.HomeTeamCountry == selectedTeam
-                ? match.HomeTeamStatistics.StartingEleven
-                : match.AwayTeamStatistics.StartingEleven;
-
-            pnlPlayers.Controls.Clear();
-
-            foreach (var player in players)
             {
-                Button playerBtn = new Button
-                {
-                    Text = player.Name,
-                    Tag = player,
-                    Width = pnlPlayers.Width - 25,
-                    Height = 40,
-                    Margin = new Padding(5)
-                };
-                playerBtn.Click += PlayerBtn_Click;
-                pnlPlayers.Controls.Add(playerBtn);
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"
+            };
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.Image = Image.FromFile(ofd.FileName);
             }
         }
 
-        private void PlayerBtn_Click(object? sender, EventArgs e)
+        private void SaveFavPlayers()
         {
-            Button btn = sender as Button;
-            selectedPlayer = btn.Tag as StartingEleven;
+            var names = pnlFavPlayers.Controls
+                .OfType<Label>()
+                .Select(lbl => lbl.Text)
+                .ToList();
 
-            lblName.Text = selectedPlayer.Name;
-            lblShirt.Text = selectedPlayer.ShirtNumber.ToString();
-            lblPosition.Text = selectedPlayer.Position.ToString();
-            lblCaptain.Text = selectedPlayer.Captain ? "Da" : "Ne";
-            lblFavPlayer.Text = "Nije dodan";
-            pictureBox.Image = null;
+            File.WriteAllLines(FavPlayersFile, names);
         }
 
-        private StartingEleven selectedPlayer;
-
-       
-
-       
-
-        private void lblRepresentation_Click(object sender, EventArgs e)
+        private void LoadFavPlayers()
         {
+            if (!File.Exists(FavPlayersFile)) return;
 
+            var lines = File.ReadAllLines(FavPlayersFile);
+
+            foreach (var name in lines)
+            {
+                Label favLabel = new Label
+                {
+                    Text = name,
+                    Width = pnlFavPlayers.Width - 25,
+                    Height = 30,
+                    Margin = new Padding(5),
+                    BorderStyle = BorderStyle.FixedSingle
+                };
+
+                favLabel.Click += (s, ev) =>
+                {
+                    lblName.Text = name;
+                    lblFavPlayer.Text = "Omiljeni igrač";
+                };
+
+                pnlFavPlayers.Controls.Add(favLabel);
+            }
         }
 
-        private void MenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void pictureBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblShirt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPosition_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCaptain_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblFavPlayer_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lblPlayers_Click(object sender, EventArgs e) { }
+        private void lblFavPlayers_Click(object sender, EventArgs e) { }
+        private void lblPlayer_Click(object sender, EventArgs e) { }
+        private void pnlPlayers_Paint(object sender, PaintEventArgs e) { }
+        private void pnlFavPlayers_Paint(object sender, PaintEventArgs e) { }
+        private void pnlPlayer_Paint(object sender, PaintEventArgs e) { }
+        private void lblRepresentation_Click(object sender, EventArgs e) { }
+        private void MenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e) { }
+        private void pictureBox_Click(object sender, EventArgs e) { }
+        private void lblName_Click(object sender, EventArgs e) { }
+        private void lblShirt_Click(object sender, EventArgs e) { }
+        private void lblPosition_Click(object sender, EventArgs e) { }
+        private void lblCaptain_Click(object sender, EventArgs e) { }
+        private void lblFavPlayer_Click(object sender, EventArgs e) { }
     }
 }

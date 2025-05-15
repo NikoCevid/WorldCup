@@ -45,12 +45,8 @@
             lblFavPlayers = new Label();
             lblPlayer = new Label();
             lblRepresentation = new Label();
-            settingsToolStripMenuItem = new ToolStripMenuItem();
-            rangListToolStripMenuItem = new ToolStripMenuItem();
-            MenuStrip = new MenuStrip();
             pnlPlayer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
-            MenuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // cmbRepresentation
@@ -222,29 +218,6 @@
             lblRepresentation.Text = "Favourite representation:";
             lblRepresentation.Click += lblRepresentation_Click;
             // 
-            // settingsToolStripMenuItem
-            // 
-            settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(76, 24);
-            settingsToolStripMenuItem.Text = "Settings";
-            // 
-            // rangListToolStripMenuItem
-            // 
-            rangListToolStripMenuItem.Name = "rangListToolStripMenuItem";
-            rangListToolStripMenuItem.Size = new Size(83, 24);
-            rangListToolStripMenuItem.Text = "Rang List";
-            // 
-            // MenuStrip
-            // 
-            MenuStrip.ImageScalingSize = new Size(20, 20);
-            MenuStrip.Items.AddRange(new ToolStripItem[] { settingsToolStripMenuItem, rangListToolStripMenuItem });
-            MenuStrip.Location = new Point(0, 0);
-            MenuStrip.Name = "MenuStrip";
-            MenuStrip.Size = new Size(800, 28);
-            MenuStrip.TabIndex = 7;
-            MenuStrip.Text = "menuStrip2";
-            MenuStrip.ItemClicked += MenuStrip_ItemClicked;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -261,14 +234,11 @@
             Controls.Add(pnlPlayer);
             Controls.Add(pnlPlayers);
             Controls.Add(cmbRepresentation);
-            Controls.Add(MenuStrip);
             Name = "MainForm";
             Text = "MainForm";
             pnlPlayer.ResumeLayout(false);
             pnlPlayer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
-            MenuStrip.ResumeLayout(false);
-            MenuStrip.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -293,8 +263,5 @@
         private Label lblCaptain;
         private Label lblPosition;
         private Label lblFavPlayer;
-        private ToolStripMenuItem settingsToolStripMenuItem;
-        private ToolStripMenuItem rangListToolStripMenuItem;
-        private MenuStrip MenuStrip;
     }
 }
