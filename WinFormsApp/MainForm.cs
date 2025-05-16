@@ -135,8 +135,14 @@ namespace WinFormsApp
             lblPosition.Text = player.Position.ToString();
             lblCaptain.Text = player.Captain ? "Da" : "Ne";
             lblFavPlayer.Text = "Nije dodan";
-            pictureBox.Image = null;
+
+            //  Uvijek koristi default-player.png
+            pictureBox.Image = ImageHelper.LoadEmbeddedImage("WinFormsApp.Resources.default-player.png");
         }
+
+
+
+
 
         private void btnTransfer_Click(object sender, EventArgs e)
         {

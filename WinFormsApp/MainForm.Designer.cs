@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        
+
 
         #region Windows Form Designer generated code
 
@@ -62,20 +62,20 @@
             // 
             // pnlPlayers
             // 
+            pnlPlayers.AutoScroll = true;
+            pnlPlayers.FlowDirection = FlowDirection.TopDown;
             pnlPlayers.Location = new Point(22, 128);
             pnlPlayers.Name = "pnlPlayers";
-            pnlPlayers.Size = new Size(250, 200);
+            pnlPlayers.Size = new Size(250, 307);
             pnlPlayers.TabIndex = 1;
-            pnlPlayers.FlowDirection = FlowDirection.TopDown;
             pnlPlayers.WrapContents = false;
-            pnlPlayers.AutoScroll = true;
             pnlPlayers.Paint += pnlPlayers_Paint;
             // 
             // pnlFavPlayers
             // 
             pnlFavPlayers.Location = new Point(320, 128);
             pnlFavPlayers.Name = "pnlFavPlayers";
-            pnlFavPlayers.Size = new Size(250, 200);
+            pnlFavPlayers.Size = new Size(250, 307);
             pnlFavPlayers.TabIndex = 0;
             pnlFavPlayers.Paint += pnlFavPlayers_Paint;
             // 
@@ -87,16 +87,16 @@
             pnlPlayer.Controls.Add(lblShirt);
             pnlPlayer.Controls.Add(lblName);
             pnlPlayer.Controls.Add(pictureBox);
-            pnlPlayer.Location = new Point(584, 128);
+            pnlPlayer.Location = new Point(608, 128);
             pnlPlayer.Name = "pnlPlayer";
-            pnlPlayer.Size = new Size(150, 250);
+            pnlPlayer.Size = new Size(180, 307);
             pnlPlayer.TabIndex = 3;
             pnlPlayer.Paint += pnlPlayer_Paint;
             // 
             // lblFavPlayer
             // 
             lblFavPlayer.AutoSize = true;
-            lblFavPlayer.Location = new Point(13, 214);
+            lblFavPlayer.Location = new Point(10, 278);
             lblFavPlayer.Name = "lblFavPlayer";
             lblFavPlayer.Size = new Size(117, 20);
             lblFavPlayer.TabIndex = 5;
@@ -106,7 +106,7 @@
             // lblCaptain
             // 
             lblCaptain.AutoSize = true;
-            lblCaptain.Location = new Point(12, 194);
+            lblCaptain.Location = new Point(10, 249);
             lblCaptain.Name = "lblCaptain";
             lblCaptain.Size = new Size(63, 20);
             lblCaptain.TabIndex = 4;
@@ -116,7 +116,7 @@
             // lblPosition
             // 
             lblPosition.AutoSize = true;
-            lblPosition.Location = new Point(11, 162);
+            lblPosition.Location = new Point(10, 229);
             lblPosition.Name = "lblPosition";
             lblPosition.Size = new Size(64, 20);
             lblPosition.TabIndex = 3;
@@ -126,7 +126,7 @@
             // lblShirt
             // 
             lblShirt.AutoSize = true;
-            lblShirt.Location = new Point(13, 128);
+            lblShirt.Location = new Point(10, 199);
             lblShirt.Name = "lblShirt";
             lblShirt.Size = new Size(100, 20);
             lblShirt.TabIndex = 2;
@@ -136,7 +136,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(11, 95);
+            lblName.Location = new Point(11, 170);
             lblName.Name = "lblName";
             lblName.Size = new Size(52, 20);
             lblName.TabIndex = 1;
@@ -147,7 +147,7 @@
             // 
             pictureBox.Location = new Point(11, 14);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(123, 56);
+            pictureBox.Size = new Size(123, 153);
             pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox.TabIndex = 0;
             pictureBox.TabStop = false;
@@ -155,7 +155,7 @@
             // 
             // btnTransfer
             // 
-            btnTransfer.Location = new Point(22, 392);
+            btnTransfer.Location = new Point(33, 455);
             btnTransfer.Name = "btnTransfer";
             btnTransfer.Size = new Size(215, 29);
             btnTransfer.TabIndex = 0;
@@ -165,7 +165,7 @@
             // 
             // btnRemove
             // 
-            btnRemove.Location = new Point(296, 392);
+            btnRemove.Location = new Point(302, 455);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(205, 29);
             btnRemove.TabIndex = 4;
@@ -175,7 +175,7 @@
             // 
             // btnPicutre
             // 
-            btnPicutre.Location = new Point(584, 392);
+            btnPicutre.Location = new Point(584, 455);
             btnPicutre.Name = "btnPicutre";
             btnPicutre.Size = new Size(154, 29);
             btnPicutre.TabIndex = 5;
@@ -206,7 +206,7 @@
             // lblPlayer
             // 
             lblPlayer.AutoSize = true;
-            lblPlayer.Location = new Point(584, 93);
+            lblPlayer.Location = new Point(608, 93);
             lblPlayer.Name = "lblPlayer";
             lblPlayer.Size = new Size(52, 20);
             lblPlayer.TabIndex = 9;

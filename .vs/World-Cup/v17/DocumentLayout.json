@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\World-Cup\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|C:\\Users\\User\\Desktop\\World-Cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|C:\\Users\\User\\Desktop\\World-Cup\\winformsapp\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|C:\\Users\\User\\Desktop\\World-Cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,37 +34,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "ImageHelper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\ImageHelper.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\ImageHelper.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\ImageHelper.cs",
+              "RelativeToolTip": "WinFormsApp\\ImageHelper.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T17:37:49.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.Designer.cs",
               "RelativeToolTip": "WinFormsApp\\MainForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP4AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAYwJYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T16:42:08.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\MainForm.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
               "RelativeToolTip": "WinFormsApp\\MainForm.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAIwHsAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAqwIsAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T19:04:49.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\MainForm.cs",
@@ -72,28 +89,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PlayerControl.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\PlayerControl.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.cs",
               "RelativeToolTip": "WinFormsApp\\PlayerControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwDMAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T17:39:23.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PlayerControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\PlayerControl.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.cs [Design]",
               "RelativeToolTip": "WinFormsApp\\PlayerControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T17:39:04.497Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-15T17:39:04.497Z"
             }
           ]
         }

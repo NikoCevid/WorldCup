@@ -2,9 +2,8 @@
 using System;
 using System.Drawing;
 using System.IO;
-using System.Reflection;
-using WinFormsApp.Helpers;
 using System.Windows.Forms;
+using WinFormsApp.Helpers;
 
 namespace WinFormsApp
 {
@@ -20,7 +19,7 @@ namespace WinFormsApp
             IsFavourite = isFavourite;
             SetupControl();
 
-            //  Dodavanje kontekstnog menija
+            // 📋 Dodavanje context menija
             this.ContextMenuStrip = new ContextMenuStrip();
 
             var addToFav = new ToolStripMenuItem("Dodaj u omiljene");
@@ -31,12 +30,12 @@ namespace WinFormsApp
             removeFromFav.Click += (s, e) => MoveToNonFavourite();
             this.ContextMenuStrip.Items.Add(removeFromFav);
 
+            // ✅ Klik podrška na sve kontrole unutar PlayerControl
             this.MouseClick += PlayerControl_MouseClick;
             foreach (Control c in this.Controls)
             {
                 c.MouseClick += PlayerControl_MouseClick;
             }
-
         }
 
         private void SetupControl()
@@ -47,29 +46,29 @@ namespace WinFormsApp
             lblCaptain.Text = PlayerData.Captain ? "Kapetan" : "";
             picStar.Visible = IsFavourite;
 
-            string imgPath = Path.Combine("player_pictures", $"{PlayerData.Name}.png");
             picStar.Image = ImageHelper.LoadEmbeddedImage("WinFormsApp.Resources.star.png");
-            picPlayer.Image = ImageHelper.LoadEmbeddedImage("WinFormsApp.Resources.default_player.png");
+
+            //  Uvijek koristi default-player.png
+            picPlayer.Image = ImageHelper.LoadEmbeddedImage("WinFormsApp.Resources.default-player.png");
         }
 
-        //  Drag and drop
+
+
+        //  Drag + selekcija
         protected override void OnMouseDown(MouseEventArgs e)
         {
             base.OnMouseDown(e);
             if (e.Button == MouseButtons.Left)
             {
-                // ✅ Selektiraj igrača
                 if (this.FindForm() is MainForm mainForm)
                 {
                     mainForm.SelectPlayer(PlayerData);
                 }
-
-                // ✅ Pokreni drag
                 DoDragDrop(this, DragDropEffects.Move);
             }
         }
 
-        //  Klik igrač = odaberi ga
+        // ✅ Klik selektira igrača (iz bilo kojeg unutarnjeg labela)
         private void PlayerControl_MouseClick(object sender, MouseEventArgs e)
         {
             if (this.FindForm() is MainForm mainForm)
@@ -88,13 +87,6 @@ namespace WinFormsApp
         {
             var parentForm = this.FindForm() as MainForm;
             parentForm?.MovePlayerControl(this, false);
-        }
-
-        private Image LoadEmbeddedImage(string resourceName)
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            using var stream = assembly.GetManifestResourceStream(resourceName);
-            return stream != null ? Image.FromStream(stream) : null;
         }
     }
 }

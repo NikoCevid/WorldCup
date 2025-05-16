@@ -13,14 +13,5 @@ namespace WinFormsApp.Helpers
             using var stream = assembly.GetManifestResourceStream(resourceName);
             return stream != null ? Image.FromStream(stream) : null;
         }
-
-        public static void ListAllEmbeddedResourceNames()
-        {
-            var names = Assembly.GetExecutingAssembly().GetManifestResourceNames();
-            foreach (var name in names)
-            {
-                System.Diagnostics.Debug.WriteLine(name);
-            }
-        }
     }
 }
