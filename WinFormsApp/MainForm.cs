@@ -25,8 +25,19 @@ namespace WinFormsApp
         public MainForm()
         {
             InitializeComponent();
+
+            pnlPlayers.AllowDrop = true;
+            pnlPlayers.DragEnter += Panel_DragEnter;
+            pnlPlayers.DragDrop += Panel_DragDrop;
+
+            pnlFavPlayers.AllowDrop = true;
+            pnlFavPlayers.DragEnter += Panel_DragEnter;
+            pnlFavPlayers.DragDrop += Panel_DragDrop;
+
+
             LoadAsync();
         }
+
 
         private async void LoadAsync()
         {
@@ -105,26 +116,18 @@ namespace WinFormsApp
                 .ToList();
 
             Debug.WriteLine($"Broj igrača za {selectedCountry}: {players.Count}");
-            //var match = matchList
-            //    .FirstOrDefault(m => m.HomeTeamCountry == selectedCountry || m.AwayTeamCountry == selectedCountry);
-
-            //if (match == null) return;
-
-            //var players = match.HomeTeamCountry == selectedCountry
-            //    ? match.HomeTeamStatistics.StartingEleven.Union(match.HomeTeamStatistics.Substitutes).ToList()
-            //    : match.AwayTeamStatistics.StartingEleven.Union(match.AwayTeamStatistics.Substitutes).ToList();
-
+             
             pnlPlayers.Controls.Clear();
 
             foreach (var player in players)
             {
-                var control = new PlayerControl(player, isFavourite: false);
-                control.Click += (s, ev) => SelectPlayer(player);
+                var control = new PlayerControl(player, isFavourite: false);            
                 pnlPlayers.Controls.Add(control);
+
             }
         }
 
-        private void SelectPlayer(StartingEleven player)
+        public void SelectPlayer(StartingEleven player)
         {
             selectedPlayer = player;
             lblName.Text = player.Name;
@@ -229,6 +232,74 @@ namespace WinFormsApp
                 pnlFavPlayers.Controls.Add(favLabel);
             }
         }
+
+        private void Panel_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(PlayerControl)))
+            {
+                e.Effect = DragDropEffects.Move;
+            }
+        }
+
+
+        private void PlayerControl_Click(object sender, EventArgs e)
+        {
+            if (sender is PlayerControl pc && pc.PlayerData != null)
+            {
+                SelectPlayer(pc.PlayerData);
+            }
+        }
+
+        private void Panel_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(PlayerControl)))
+            {
+                var playerControl = (PlayerControl)e.Data.GetData(typeof(PlayerControl));
+                var targetPanel = sender as FlowLayoutPanel;
+
+                var currentParent = playerControl.Parent as FlowLayoutPanel;
+                if (currentParent != null && currentParent != targetPanel)
+                {
+                    currentParent.Controls.Remove(playerControl);
+                    targetPanel.Controls.Add(playerControl);
+
+                    //  Rebind Click event da radi desni prikaz
+                    playerControl.Click -= PlayerControl_Click;
+                    playerControl.Click += PlayerControl_Click;
+                }
+            }
+        }
+
+     
+
+        public void MovePlayerControl(PlayerControl control, bool toFavourite)
+        {
+            if (toFavourite)
+            {
+                if (!pnlFavPlayers.Controls.Contains(control))
+                {
+                    pnlPlayers.Controls.Remove(control);
+                    pnlFavPlayers.Controls.Add(control);
+
+                    control.Click -= PlayerControl_Click;
+                    control.Click += PlayerControl_Click;
+                }
+            }
+            else
+            {
+                if (!pnlPlayers.Controls.Contains(control))
+                {
+                    pnlFavPlayers.Controls.Remove(control);
+                    pnlPlayers.Controls.Add(control);
+
+                    control.Click -= PlayerControl_Click;
+                    control.Click += PlayerControl_Click;
+                }
+            }
+        }
+
+
+
 
         private void lblPlayers_Click(object sender, EventArgs e) { }
         private void lblFavPlayers_Click(object sender, EventArgs e) { }

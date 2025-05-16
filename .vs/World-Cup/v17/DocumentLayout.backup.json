@@ -3,72 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\World-Cup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\resources\\default-player.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
-      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\resources\\default-player.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\models\\matchdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\matchdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\models\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\enums\\typeofevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\typeofevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\enums\\tactics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\tactics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\enums\\stagename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\stagename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\enums\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\playercontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\playercontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|C:\\Users\\User\\Desktop\\World-Cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\enums\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\enums\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\enums\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\enums\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|C:\\Users\\User\\Desktop\\World-Cup\\winformsapp\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\imagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|C:\\Users\\User\\Desktop\\World-Cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -83,161 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "default-player.png",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\Resources\\default-player.png",
-              "RelativeDocumentMoniker": "WinFormsApp\\Resources\\default-player.png",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\Resources\\default-player.png",
-              "RelativeToolTip": "WinFormsApp\\Resources\\default-player.png",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-05-16T10:39:45.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MatchDetail.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\MatchDetail.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\MatchDetail.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\MatchDetail.cs",
-              "RelativeToolTip": "Data\\Models\\MatchDetail.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T10:34:44.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Weather.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\Weather.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\Weather.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\Weather.cs",
-              "RelativeToolTip": "Data\\Models\\Weather.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T10:34:32.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.Designer.cs",
               "RelativeToolTip": "WinFormsApp\\MainForm.Designer.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAgwEsAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T10:09:01.222Z",
+              "WhenOpened": "2025-05-16T16:42:08.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TypeOfEvent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\TypeOfEvent.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\TypeOfEvent.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\TypeOfEvent.cs",
-              "RelativeToolTip": "Data\\Enums\\TypeOfEvent.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA3wBQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:51:25.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Tactics.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Tactics.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Tactics.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Tactics.cs",
-              "RelativeToolTip": "Data\\Enums\\Tactics.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAYwBYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:49:01.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Status.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Status.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Status.cs",
-              "RelativeToolTip": "Data\\Enums\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:48:59.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Position.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Position.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Position.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Position.cs",
-              "RelativeToolTip": "Data\\Enums\\Position.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:48:55.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StageName.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\StageName.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\StageName.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\StageName.cs",
-              "RelativeToolTip": "Data\\Enums\\StageName.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:43:59.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Description.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Description.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Description.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Description.cs",
-              "RelativeToolTip": "Data\\Enums\\Description.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA3wBQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:39:50.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Time.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Time.cs",
-              "RelativeDocumentMoniker": "Data\\Enums\\Time.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Enums\\Time.cs",
-              "RelativeToolTip": "Data\\Enums\\Time.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:33:25.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\MainForm.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
               "RelativeToolTip": "WinFormsApp\\MainForm.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAmwHQAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAIwHsAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T19:04:49.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\MainForm.cs",
@@ -249,46 +72,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ImageHelper.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\ImageHelper.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\ImageHelper.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\ImageHelper.cs",
-              "RelativeToolTip": "WinFormsApp\\ImageHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T18:09:40.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PlayerControl.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.Designer.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\PlayerControl.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.Designer.cs",
-              "RelativeToolTip": "WinFormsApp\\PlayerControl.Designer.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAUwB4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T17:40:17.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "PlayerControl.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\PlayerControl.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.cs",
               "RelativeToolTip": "WinFormsApp\\PlayerControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAADYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T17:39:23.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "PlayerControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\PlayerControl.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\PlayerControl.cs",
