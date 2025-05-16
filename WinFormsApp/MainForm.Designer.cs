@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             cmbRepresentation = new ComboBox();
-            pnlPlayers = new Panel();
-            pnlFavPlayers = new Panel();
+            pnlPlayers = new FlowLayoutPanel();
+            pnlFavPlayers = new FlowLayoutPanel();
             pnlPlayer = new Panel();
             lblFavPlayer = new Label();
             lblCaptain = new Label();
@@ -62,15 +62,18 @@
             // 
             pnlPlayers.Location = new Point(22, 128);
             pnlPlayers.Name = "pnlPlayers";
-            pnlPlayers.Size = new Size(150, 250);
+            pnlPlayers.Size = new Size(250, 200);
             pnlPlayers.TabIndex = 1;
+            pnlPlayers.FlowDirection = FlowDirection.TopDown;
+            pnlPlayers.WrapContents = false;
+            pnlPlayers.AutoScroll = true;
             pnlPlayers.Paint += pnlPlayers_Paint;
             // 
             // pnlFavPlayers
             // 
             pnlFavPlayers.Location = new Point(320, 128);
             pnlFavPlayers.Name = "pnlFavPlayers";
-            pnlFavPlayers.Size = new Size(150, 250);
+            pnlFavPlayers.Size = new Size(250, 200);
             pnlFavPlayers.TabIndex = 0;
             pnlFavPlayers.Paint += pnlFavPlayers_Paint;
             // 
@@ -246,8 +249,8 @@
         #endregion
 
         private ComboBox cmbRepresentation;
-        private Panel pnlPlayers;
-        private Panel pnlFavPlayers;
+        private FlowLayoutPanel pnlPlayers;
+        private FlowLayoutPanel pnlFavPlayers;
         private Panel pnlPlayer;
         private Button btnTransfer;
         private Button btnRemove;

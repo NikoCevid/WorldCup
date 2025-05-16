@@ -3,6 +3,7 @@ using Data.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -81,14 +82,37 @@ namespace WinFormsApp
             var selectedCountry = teams.FirstOrDefault(t => t.FifaCode == selectedFifaCode)?.Country;
             if (selectedCountry == null) return;
 
-            var match = matchList
-                .FirstOrDefault(m => m.HomeTeamCountry == selectedCountry || m.AwayTeamCountry == selectedCountry);
+            var teamMatches = matchList
+            .Where(m => m.HomeTeamCountry == selectedCountry || m.AwayTeamCountry == selectedCountry)
+            .ToList();
 
-            if (match == null) return;
+            var players = new List<StartingEleven>();
 
-            var players = match.HomeTeamCountry == selectedCountry
-                ? match.HomeTeamStatistics.StartingEleven.Union(match.HomeTeamStatistics.Substitutes).ToList()
-                : match.AwayTeamStatistics.StartingEleven.Union(match.AwayTeamStatistics.Substitutes).ToList();
+            foreach (var match in teamMatches)
+            {
+                var teamStats = match.HomeTeamCountry == selectedCountry
+                    ? match.HomeTeamStatistics
+                    : match.AwayTeamStatistics;
+
+                players.AddRange(teamStats.StartingEleven);
+                players.AddRange(teamStats.Substitutes);
+            }
+
+            
+            players = players
+                .GroupBy(p => p.Name)
+                .Select(g => g.First())
+                .ToList();
+
+            Debug.WriteLine($"Broj igrača za {selectedCountry}: {players.Count}");
+            //var match = matchList
+            //    .FirstOrDefault(m => m.HomeTeamCountry == selectedCountry || m.AwayTeamCountry == selectedCountry);
+
+            //if (match == null) return;
+
+            //var players = match.HomeTeamCountry == selectedCountry
+            //    ? match.HomeTeamStatistics.StartingEleven.Union(match.HomeTeamStatistics.Substitutes).ToList()
+            //    : match.AwayTeamStatistics.StartingEleven.Union(match.AwayTeamStatistics.Substitutes).ToList();
 
             pnlPlayers.Controls.Clear();
 

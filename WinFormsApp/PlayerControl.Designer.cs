@@ -28,7 +28,7 @@ namespace WinFormsApp
             // 
             picPlayer.Location = new Point(5, 5);
             picPlayer.Name = "picPlayer";
-            picPlayer.Size = new Size(60, 60);
+            picPlayer.Size = new Size(50, 50);
             picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
             picPlayer.TabIndex = 0;
             picPlayer.TabStop = false;
@@ -85,7 +85,7 @@ namespace WinFormsApp
             Controls.Add(lblPosition);
             Controls.Add(lblCaptain);
             Name = "PlayerControl";
-            Size = new Size(426, 235);
+            Size = new Size(200, 70);
             ((System.ComponentModel.ISupportInitialize)picPlayer).EndInit();
             ((System.ComponentModel.ISupportInitialize)picStar).EndInit();
             ResumeLayout(false);
