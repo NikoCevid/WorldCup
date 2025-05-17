@@ -109,19 +109,19 @@ namespace WinFormsApp
                 players.AddRange(teamStats.Substitutes);
             }
 
-            
+
             players = players
                 .GroupBy(p => p.Name)
                 .Select(g => g.First())
                 .ToList();
 
             Debug.WriteLine($"Broj igrača za {selectedCountry}: {players.Count}");
-             
+
             pnlPlayers.Controls.Clear();
 
             foreach (var player in players)
             {
-                var control = new PlayerControl(player, isFavourite: false);            
+                var control = new PlayerControl(player, isFavourite: false);
                 pnlPlayers.Controls.Add(control);
 
             }
@@ -276,7 +276,7 @@ namespace WinFormsApp
             }
         }
 
-     
+
 
         public void MovePlayerControl(PlayerControl control, bool toFavourite)
         {
@@ -304,6 +304,27 @@ namespace WinFormsApp
             }
         }
 
+        private async void btnRankings_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(selectedFifaCode) || matchList == null)
+            {
+                MessageBox.Show("Prvo odaberi reprezentaciju!");
+                return;
+            }
+
+            var teams = await repo.GetAllTeamsAsync();
+            var selectedCountry = teams.FirstOrDefault(t => t.FifaCode == selectedFifaCode)?.Country;
+
+            if (selectedCountry == null)
+            {
+                MessageBox.Show("Greška: Country nije pronađen.");
+                return;
+            }
+
+            var rankingsForm = new RankingsForm(matchList, selectedCountry);
+            rankingsForm.ShowDialog();
+        }
+
 
 
 
@@ -321,5 +342,6 @@ namespace WinFormsApp
         private void lblPosition_Click(object sender, EventArgs e) { }
         private void lblCaptain_Click(object sender, EventArgs e) { }
         private void lblFavPlayer_Click(object sender, EventArgs e) { }
+
     }
 }

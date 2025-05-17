@@ -10,6 +10,8 @@ namespace WinFormsApp
     public partial class PlayerControl : UserControl
     {
         public StartingEleven PlayerData { get; private set; }
+        public string StatValue => lblStatValue.Text;
+
         public bool IsFavourite { get; private set; }
 
         public PlayerControl(StartingEleven player, bool isFavourite = false)
@@ -88,5 +90,11 @@ namespace WinFormsApp
             var parentForm = this.FindForm() as MainForm;
             parentForm?.MovePlayerControl(this, false);
         }
+
+        public void SetStatValue(string value)
+        {
+            lblStatValue.Text = value;
+        }
+
     }
 }

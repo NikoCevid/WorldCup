@@ -1,16 +1,17 @@
-﻿
-using WinFormsApp.Helpers;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace WinFormsApp
 {
-        partial class PlayerControl
-        {
-            private System.Windows.Forms.PictureBox picPlayer;
-            private System.Windows.Forms.PictureBox picStar;
-            private System.Windows.Forms.Label lblName;
-            private System.Windows.Forms.Label lblNumber;
-            private System.Windows.Forms.Label lblPosition;
-            private System.Windows.Forms.Label lblCaptain;
+    partial class PlayerControl
+    {
+        private PictureBox picPlayer;
+        private PictureBox picStar;
+        private Label lblName;
+        private Label lblNumber;
+        private Label lblPosition;
+        private Label lblCaptain;
+        private Label lblStatValue;
 
         private void InitializeComponent()
         {
@@ -20,9 +21,12 @@ namespace WinFormsApp
             lblNumber = new Label();
             lblPosition = new Label();
             lblCaptain = new Label();
+            lblStatValue = new Label();
+
             ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picStar).BeginInit();
             SuspendLayout();
+
             // 
             // picPlayer
             // 
@@ -32,6 +36,7 @@ namespace WinFormsApp
             picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
             picPlayer.TabIndex = 0;
             picPlayer.TabStop = false;
+
             // 
             // picStar
             // 
@@ -42,6 +47,7 @@ namespace WinFormsApp
             picStar.TabIndex = 1;
             picStar.TabStop = false;
             picStar.Visible = false;
+
             // 
             // lblName
             // 
@@ -50,6 +56,7 @@ namespace WinFormsApp
             lblName.Name = "lblName";
             lblName.Size = new Size(0, 20);
             lblName.TabIndex = 2;
+
             // 
             // lblNumber
             // 
@@ -58,6 +65,7 @@ namespace WinFormsApp
             lblNumber.Name = "lblNumber";
             lblNumber.Size = new Size(0, 20);
             lblNumber.TabIndex = 3;
+
             // 
             // lblPosition
             // 
@@ -66,6 +74,7 @@ namespace WinFormsApp
             lblPosition.Name = "lblPosition";
             lblPosition.Size = new Size(0, 20);
             lblPosition.TabIndex = 4;
+
             // 
             // lblCaptain
             // 
@@ -75,6 +84,17 @@ namespace WinFormsApp
             lblCaptain.Name = "lblCaptain";
             lblCaptain.Size = new Size(0, 20);
             lblCaptain.TabIndex = 5;
+
+            // 
+            // lblStatValue
+            // 
+            lblStatValue.AutoSize = true;
+            lblStatValue.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblStatValue.Location = new Point(5, 60);
+            lblStatValue.Name = "lblStatValue";
+            lblStatValue.Size = new Size(0, 20);
+            lblStatValue.TabIndex = 6;
+
             // 
             // PlayerControl
             // 
@@ -84,15 +104,13 @@ namespace WinFormsApp
             Controls.Add(lblNumber);
             Controls.Add(lblPosition);
             Controls.Add(lblCaptain);
+            Controls.Add(lblStatValue);
             Name = "PlayerControl";
-            Size = new Size(200, 70);
+            Size = new Size(200, 85);
             ((System.ComponentModel.ISupportInitialize)picPlayer).EndInit();
             ((System.ComponentModel.ISupportInitialize)picStar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
     }
-    }
-
-
-
+}
