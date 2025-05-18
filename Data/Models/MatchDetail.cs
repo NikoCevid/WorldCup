@@ -26,14 +26,14 @@ namespace Data.Models
 
         [JsonProperty("fifa_id")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public long FifaId { get; set; }
+        public long? FifaId { get; set; }
 
         [JsonProperty("weather")]
         public Weather? Weather { get; set; }
 
         [JsonProperty("attendance")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public long Attendance { get; set; }
+        public long? Attendance { get; set; }
 
         [JsonProperty("officials")]
         public List<string>? Officials { get; set; }

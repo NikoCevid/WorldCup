@@ -10,7 +10,7 @@ namespace Data.Models
     public partial class Team
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long? Id { get; set; }
 
         [JsonProperty("country")]
         public string? Country { get; set; }
@@ -22,35 +22,34 @@ namespace Data.Models
         public string? FifaCode { get; set; }
 
         [JsonProperty("group_id")]
-        public long GroupId { get; set; }
+        public long? GroupId { get; set; }
 
         [JsonProperty("group_letter")]
         public string? GroupLetter { get; set; }
 
         [JsonProperty("wins")]
-        public long Wins { get; set; }
+        public long? Wins { get; set; }
 
         [JsonProperty("draws")]
-        public long Draws { get; set; }
+        public long? Draws { get; set; }
 
         [JsonProperty("losses")]
-        public long Losses { get; set; }
+        public long? Losses { get; set; }
 
         [JsonProperty("games_played")]
-        public long GamesPlayed { get; set; }
+        public long? GamesPlayed { get; set; }
 
         [JsonProperty("points")]
-        public long Points { get; set; }
+        public long? Points { get; set; }
 
         [JsonProperty("goals_for")]
-        public long GoalsFor { get; set; }
+        public long? GoalsFor { get; set; }
 
         [JsonProperty("goals_against")]
-        public long GoalsAgainst { get; set; }
+        public long? GoalsAgainst { get; set; }
 
         [JsonProperty("goal_differential")]
-        public long GoalDifferential { get; set; }
+        public long? GoalDifferential { get; set; }
     }
 }
-
 

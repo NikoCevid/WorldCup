@@ -220,7 +220,7 @@
             btnSettings.Name = "btnSettings";
             btnSettings.Size = new Size(92, 33);
             btnSettings.TabIndex = 0;
-            btnSettings.Text = "Postavke";
+            btnSettings.Text = "Settings";
             btnSettings.Click += btnSettings_Click;
             // 
             // btnExit
@@ -229,7 +229,7 @@
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(75, 30);
             btnExit.TabIndex = 8;
-            btnExit.Text = "Izlaz";
+            btnExit.Text = "Exit";
             btnExit.Click += btnExit_Click;
             // 
             // MainForm
