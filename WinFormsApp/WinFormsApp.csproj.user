@@ -4,6 +4,9 @@
     <Compile Update="AttendanceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ExitConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

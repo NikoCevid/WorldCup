@@ -26,24 +26,9 @@ namespace WinFormsApp
             LoadRankings();
         }
 
-        private string GetCountryNameFromCode(string code)
-        {
-            var match = matches.FirstOrDefault(m =>
-                (m.HomeTeam != null && m.HomeTeamCountry == code) ||
-                (m.AwayTeam != null && m.AwayTeamCountry == code));
-
-            if (match != null)
-            {
-                if (match.HomeTeamCountry == code) return match.HomeTeamCountry;
-                if (match.AwayTeamCountry == code) return match.AwayTeamCountry;
-            }
-
-            return code;
-        }
-
         private void LoadRankings()
         {
-            MessageBox.Show($"FIFA Kod: {fifaCode ?? "null"}\nCountry: {countryName ?? "null"}\nMatch count: {matches?.Count}");
+           
 
             // 1. Golovi
             var goalEvents = matches
@@ -99,7 +84,7 @@ namespace WinFormsApp
                     match.HomeTeamCountry,
                     match.AwayTeamCountry
                 );
-                flpAttendance.Controls.Add(ctrl); // ❗ OVO JE NEDOSTAJALO
+                flpAttendance.Controls.Add(ctrl); 
             }
         }
 
@@ -180,5 +165,14 @@ namespace WinFormsApp
         private void flpGoals_Paint(object sender, PaintEventArgs e) { }
         private void flpCards_Paint(object sender, PaintEventArgs e) { }
         private void flpAttendance_Paint(object sender, PaintEventArgs e) { }
+
+        private void lblCards_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void lblAttendance_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

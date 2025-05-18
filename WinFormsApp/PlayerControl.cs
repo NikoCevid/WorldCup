@@ -21,7 +21,7 @@ namespace WinFormsApp
             IsFavourite = isFavourite;
             SetupControl();
 
-            // 📋 Dodavanje context menija
+            //  Dodavanje context menija
             this.ContextMenuStrip = new ContextMenuStrip();
 
             var addToFav = new ToolStripMenuItem("Dodaj u omiljene");
@@ -32,7 +32,7 @@ namespace WinFormsApp
             removeFromFav.Click += (s, e) => MoveToNonFavourite();
             this.ContextMenuStrip.Items.Add(removeFromFav);
 
-            // ✅ Klik podrška na sve kontrole unutar PlayerControl
+            //  Klik podrška na sve kontrole unutar PlayerControl
             this.MouseClick += PlayerControl_MouseClick;
             foreach (Control c in this.Controls)
             {
@@ -49,6 +49,15 @@ namespace WinFormsApp
             picStar.Visible = IsFavourite;
 
             picStar.Image = ImageHelper.LoadEmbeddedImage("WinFormsApp.Resources.star.png");
+            // Nakon što postaviš lblName.Text
+            lblName.Text = PlayerData.Name;
+            lblName.AutoSize = true;
+
+            // Postavi zvjezdicu odmah desno od imena
+            picStar.Location = new Point(lblName.Right + 5, lblName.Top);
+            picStar.Visible = IsFavourite;
+
+
 
             //  Uvijek koristi default-player.png
             picPlayer.Image = ImageHelper.LoadEmbeddedImage("WinFormsApp.Resources.default-player.png");
@@ -70,7 +79,7 @@ namespace WinFormsApp
             }
         }
 
-        // ✅ Klik selektira igrača (iz bilo kojeg unutarnjeg labela)
+        //  Klik selektira igrača (iz bilo kojeg unutarnjeg labela)
         private void PlayerControl_MouseClick(object sender, MouseEventArgs e)
         {
             if (this.FindForm() is MainForm mainForm)

@@ -5,6 +5,7 @@ namespace WinFormsApp
 {
     partial class PlayerControl
     {
+        private System.ComponentModel.IContainer components = null;
         private PictureBox picPlayer;
         private PictureBox picStar;
         private Label lblName;
@@ -13,104 +14,96 @@ namespace WinFormsApp
         private Label lblCaptain;
         private Label lblStatValue;
 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
         private void InitializeComponent()
         {
-            picPlayer = new PictureBox();
-            picStar = new PictureBox();
-            lblName = new Label();
-            lblNumber = new Label();
-            lblPosition = new Label();
-            lblCaptain = new Label();
-            lblStatValue = new Label();
+            this.picPlayer = new PictureBox();
+            this.picStar = new PictureBox();
+            this.lblName = new Label();
+            this.lblNumber = new Label();
+            this.lblPosition = new Label();
+            this.lblCaptain = new Label();
+            this.lblStatValue = new Label();
 
-            ((System.ComponentModel.ISupportInitialize)picPlayer).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picStar).BeginInit();
-            SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStar)).BeginInit();
+            this.SuspendLayout();
 
             // 
             // picPlayer
             // 
-            picPlayer.Location = new Point(5, 5);
-            picPlayer.Name = "picPlayer";
-            picPlayer.Size = new Size(50, 50);
-            picPlayer.SizeMode = PictureBoxSizeMode.StretchImage;
-            picPlayer.TabIndex = 0;
-            picPlayer.TabStop = false;
-
-            // 
-            // picStar
-            // 
-            picStar.Location = new Point(170, 5);
-            picStar.Name = "picStar";
-            picStar.Size = new Size(16, 16);
-            picStar.SizeMode = PictureBoxSizeMode.StretchImage;
-            picStar.TabIndex = 1;
-            picStar.TabStop = false;
-            picStar.Visible = false;
+            this.picPlayer.Location = new Point(5, 5);
+            this.picPlayer.Size = new Size(48, 48);
+            this.picPlayer.SizeMode = PictureBoxSizeMode.Zoom;
+            this.picPlayer.Image = null;
 
             // 
             // lblName
             // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(75, 5);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(0, 20);
-            lblName.TabIndex = 2;
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new Point(60, 5);
+            this.lblName.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+
+            // 
+            // picStar
+            // 
+            this.picStar.Size = new Size(16, 16);
+            this.picStar.SizeMode = PictureBoxSizeMode.Zoom;
+            this.picStar.Location = new Point(200, 5); // default, ali možeš overrideat ručno
+            this.picStar.Visible = false;
 
             // 
             // lblNumber
             // 
-            lblNumber.AutoSize = true;
-            lblNumber.Location = new Point(75, 25);
-            lblNumber.Name = "lblNumber";
-            lblNumber.Size = new Size(0, 20);
-            lblNumber.TabIndex = 3;
+            this.lblNumber.AutoSize = true;
+            this.lblNumber.Location = new Point(60, 25);
 
             // 
             // lblPosition
             // 
-            lblPosition.AutoSize = true;
-            lblPosition.Location = new Point(75, 45);
-            lblPosition.Name = "lblPosition";
-            lblPosition.Size = new Size(0, 20);
-            lblPosition.TabIndex = 4;
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Location = new Point(60, 45);
 
             // 
             // lblCaptain
             // 
-            lblCaptain.AutoSize = true;
-            lblCaptain.ForeColor = Color.Red;
-            lblCaptain.Location = new Point(75, 65);
-            lblCaptain.Name = "lblCaptain";
-            lblCaptain.Size = new Size(0, 20);
-            lblCaptain.TabIndex = 5;
+            this.lblCaptain.AutoSize = true;
+            this.lblCaptain.ForeColor = Color.Red;
+            this.lblCaptain.Location = new Point(60, 65);
 
             // 
             // lblStatValue
             // 
-            lblStatValue.AutoSize = true;
-            lblStatValue.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblStatValue.Location = new Point(5, 60);
-            lblStatValue.Name = "lblStatValue";
-            lblStatValue.Size = new Size(0, 20);
-            lblStatValue.TabIndex = 6;
+            this.lblStatValue.AutoSize = true;
+            this.lblStatValue.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            this.lblStatValue.Location = new Point(180, 75); // ⬅️ podignuto gore da se ne reže
 
             // 
             // PlayerControl
             // 
-            Controls.Add(picPlayer);
-            Controls.Add(picStar);
-            Controls.Add(lblName);
-            Controls.Add(lblNumber);
-            Controls.Add(lblPosition);
-            Controls.Add(lblCaptain);
-            Controls.Add(lblStatValue);
-            Name = "PlayerControl";
-            Size = new Size(200, 85);
-            ((System.ComponentModel.ISupportInitialize)picPlayer).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picStar).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.Controls.Add(this.picPlayer);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.picStar);
+            this.Controls.Add(this.lblNumber);
+            this.Controls.Add(this.lblPosition);
+            this.Controls.Add(this.lblCaptain);
+            this.Controls.Add(this.lblStatValue);
+
+            this.Size = new Size(250, 100);
+            this.BorderStyle = BorderStyle.FixedSingle;
+
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStar)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
     }
 }

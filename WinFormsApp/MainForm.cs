@@ -21,6 +21,8 @@ namespace WinFormsApp
         private const string FavPlayersFile = "favPlayers.txt";
         private List<MatchDetail> matchList;
         private StartingEleven selectedPlayer;
+       
+
 
         public MainForm()
         {
@@ -130,64 +132,79 @@ namespace WinFormsApp
         public void SelectPlayer(StartingEleven player)
         {
             selectedPlayer = player;
+
             lblName.Text = player.Name;
             lblShirt.Text = player.ShirtNumber.ToString();
             lblPosition.Text = player.Position.ToString();
             lblCaptain.Text = player.Captain ? "Da" : "Ne";
-            lblFavPlayer.Text = "Nije dodan";
 
-            //  Uvijek koristi default-player.png
+            //  Provjeri je li već u favoritima
+            bool isFavourite = pnlFavPlayers.Controls
+                .OfType<PlayerControl>()
+                .Any(pc => pc.PlayerData.Name == player.Name &&
+                           pc.PlayerData.ShirtNumber == player.ShirtNumber);
             pictureBox.Image = ImageHelper.LoadEmbeddedImage("WinFormsApp.Resources.default-player.png");
+
+            lblFavPlayer.Text = isFavourite ? "Omiljeni" : "Nije dodan";
         }
-
-
-
 
 
         private void btnTransfer_Click(object sender, EventArgs e)
         {
             if (selectedPlayer == null) return;
 
+            // Provjeri postoji li već isti igrač u panelu
             foreach (Control ctrl in pnlFavPlayers.Controls)
             {
-                if (ctrl is Label lbl && lbl.Text == selectedPlayer.Name)
+                if (ctrl is PlayerControl pc && pc.PlayerData.Name == selectedPlayer.Name)
                     return;
             }
 
-            Label favLabel = new Label
-            {
-                Text = selectedPlayer.Name,
-                Width = pnlFavPlayers.Width - 25,
-                Height = 30,
-                Margin = new Padding(5),
-                BorderStyle = BorderStyle.FixedSingle
-            };
+            // Napravi novi PlayerControl s isFavourite=true
+            var playerControl = new PlayerControl(selectedPlayer, isFavourite: true);
 
-            favLabel.Click += (s, ev) =>
-            {
-                lblName.Text = selectedPlayer.Name;
-                lblFavPlayer.Text = "Omiljeni igrač";
-            };
+            // Dodaj ga u favorite
+            pnlFavPlayers.Controls.Add(playerControl);
 
-            pnlFavPlayers.Controls.Add(favLabel);
+            // Promijeni labelu
             lblFavPlayer.Text = "Omiljeni igrač";
 
+            // Spremi favorite
             SaveFavPlayers();
         }
 
+
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            if (selectedPlayer == null) return;
+
             foreach (Control ctrl in pnlFavPlayers.Controls)
             {
-                if (ctrl is Label lbl && lbl.Text == selectedPlayer?.Name)
+                // Moderni slučaj: PlayerControl
+                if (ctrl is PlayerControl pc &&
+                    pc.PlayerData.Name == selectedPlayer.Name &&
+                    pc.PlayerData.ShirtNumber == selectedPlayer.ShirtNumber)
                 {
-                    pnlFavPlayers.Controls.Remove(ctrl);
+                    pnlFavPlayers.Controls.Remove(pc);
                     lblFavPlayer.Text = "Nije dodan";
                     SaveFavPlayers();
-                    break;
+                    return;
+                }
+
+                // Fallback: Stari labeli (preostali prije migracije)
+                if (ctrl is Label lbl &&
+                    lbl.Text.Contains(selectedPlayer.Name))
+                {
+                    pnlFavPlayers.Controls.Remove(lbl);
+                    lblFavPlayer.Text = "Nije dodan";
+                    SaveFavPlayers();
+                    return;
                 }
             }
         }
+
+
+
 
         private void btnPicutre_Click(object sender, EventArgs e)
         {
@@ -204,13 +221,19 @@ namespace WinFormsApp
 
         private void SaveFavPlayers()
         {
-            var names = pnlFavPlayers.Controls
-                .OfType<Label>()
-                .Select(lbl => lbl.Text)
-                .ToList();
+            var favs = new List<string>();
 
-            File.WriteAllLines(FavPlayersFile, names);
+            foreach (Control ctrl in pnlFavPlayers.Controls)
+            {
+                if (ctrl is PlayerControl pc)
+                {
+                    favs.Add(pc.PlayerData.Name); 
+                }
+            }
+
+            File.WriteAllLines(FavPlayersFile, favs);
         }
+
 
         private void LoadFavPlayers()
         {
@@ -324,6 +347,42 @@ namespace WinFormsApp
             var rankingsForm = new RankingsForm(matchList, selectedCountry);
             rankingsForm.ShowDialog();
         }
+
+
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            using var settingsForm = new StartupForm(null); // ili proslijedi `dataService` ako treba
+            settingsForm.ShowDialog();
+        }
+
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            using var confirm = new ExitConfirmationForm();
+            var result = confirm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                // Pošalji zatvaranje odmah nakon što se formica zatvori
+                Task.Run(() => this.Invoke(new Action(() => this.Close())));
+            }
+        }
+
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing) // samo ako user traži zatvaranje
+            {
+                using var confirm = new ExitConfirmationForm();
+                if (confirm.ShowDialog() != DialogResult.OK)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+
 
 
 

@@ -69,6 +69,21 @@ namespace WinFormsApp
             Thread.CurrentThread.CurrentCulture = new CultureInfo(langCode);
         }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                btnApply.PerformClick(); // Enter potvrđuje
+                return true;
+            }
+            if (keyData == Keys.Escape)
+            {
+                this.Close(); // Esc zatvara formu bez primjene
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
         private void lbChampionship_Click(object sender, EventArgs e) { }
         private void cmbChampionship_SelectedIndexChanged(object sender, EventArgs e) { }
         private void lbLanguage_Click(object sender, EventArgs e) { }
