@@ -75,6 +75,9 @@ namespace Data.Models
 
         [JsonProperty("substitutes")]
         public List<StartingEleven> Substitutes { get; set; }
+
+        [JsonProperty("goals")]
+        public int Goals { get; set; } //za wpf
     }
 
 

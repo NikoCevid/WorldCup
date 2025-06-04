@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Pregled Reprezentacija" Height="600" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Red 1: odabir timova i rezultat -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+            <ComboBox x:Name="cmbMyTeam" Width="200" Margin="5" SelectionChanged="cmbMyTeam_SelectionChanged" />
+
+            <ComboBox x:Name="cmbOpponent" Width="200" Margin="5" SelectionChanged="cmbOpponent_SelectionChanged" />
+
+            <Label x:Name="lblScore"
+                   Content="0 : 0"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   Margin="10"/>
+        </StackPanel>
+
+        <!-- Red 2: gumbi -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,10">
+            <Button x:Name="btnTeamDetails" Content="Detalji moje rep." Margin="5" Width="150" Click="btnTeamDetails_Click"/>
+            <Button x:Name="btnOpponentDetails" Content="Detalji protivnika" Margin="5" Width="150" Click="btnOpponentDetails_Click"/>
+        </StackPanel>
+
+        <!-- Red 3: teren + canvas -->
+        <Grid Grid.Row="2">
+            <Image Source="Resources/field.png" Stretch="Fill" Height="500" VerticalAlignment="Top" />
+            <Canvas x:Name="canvasPlayers" IsHitTestVisible="False" Panel.ZIndex="1" />
+        </Grid>
+    </Grid>
+</Window>

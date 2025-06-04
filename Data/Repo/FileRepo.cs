@@ -60,4 +60,17 @@ public class FileRepo : IRepo
 
         return new List<T>();
     }
+
+    public async Task<List<MatchDetail>> GetMatchDetailsAsync(string fifaCode)
+    {
+        var allMatches = await GetAllMatchDetailsAsync();
+
+        return allMatches
+            .Where(m =>
+                string.Equals(m.HomeTeam?.FifaCode?.Trim(), fifaCode.Trim(), StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(m.AwayTeam?.FifaCode?.Trim(), fifaCode.Trim(), StringComparison.OrdinalIgnoreCase))
+            .ToList();
+    }
+
+
 }

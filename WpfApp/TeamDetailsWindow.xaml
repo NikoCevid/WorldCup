@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp.TeamDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Detalji Reprezentacije" Height="350" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Naziv:" Margin="5"/>
+        <Label x:Name="lblName" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="FIFA kod:" Grid.Row="1" Margin="5"/>
+        <Label x:Name="lblCode" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Odigrane utakmice:" Grid.Row="2" Margin="5"/>
+        <Label x:Name="lblPlayed" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Pobjede:" Grid.Row="3" Margin="5"/>
+        <Label x:Name="lblWins" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Neodlučeno:" Grid.Row="4" Margin="5"/>
+        <Label x:Name="lblDraws" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Porazi:" Grid.Row="5" Margin="5"/>
+        <Label x:Name="lblLosses" Grid.Row="5" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Zabijeni golovi:" Grid.Row="6" Margin="5"/>
+        <Label x:Name="lblGoalsFor" Grid.Row="6" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Primljeni golovi:" Grid.Row="7" Margin="5"/>
+        <Label x:Name="lblGoalsAgainst" Grid.Row="7" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Gol-razlika:" Grid.Row="8" Margin="5"/>
+        <Label x:Name="lblGoalDiff" Grid.Row="8" Grid.Column="1" Margin="5"/>
+    </Grid>
+</Window>

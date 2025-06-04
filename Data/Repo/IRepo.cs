@@ -4,9 +4,11 @@ public interface IRepo
 {
     Task<List<Team>> GetAllTeamsAsync();
     Task<List<MatchDetail>> GetAllMatchDetailsAsync();
+    Task<List<MatchDetail>> GetMatchDetailsAsync(string fifaCode); // wpf
+
     Task<List<TeamEvent>> GetAllTeamEventsAsync();
     Task<List<StartingEleven>> GetStartingElevensAsync();
     Task<List<TeamStatistics>> GetTeamStatisticsAsync();
     Task<List<Weather>> GetWeatherInfoAsync();
-    Task LoadDataAsync(string championshipUrl); 
+    Task LoadDataAsync(string championshipUrl);
 }

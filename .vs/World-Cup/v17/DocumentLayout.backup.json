@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\World-Cup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\models\\teamevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\teamevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\models\\matchdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\matchdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\models\\teamstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\teamstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\config\\config.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\config\\config.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\app.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TeamEvent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\TeamEvent.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\TeamEvent.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\TeamEvent.cs*",
-              "RelativeToolTip": "Data\\Models\\TeamEvent.cs*",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAwwDUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T14:56:46.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T14:36:00.506Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Team.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\Team.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\Team.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\Team.cs*",
-              "RelativeToolTip": "Data\\Models\\Team.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T14:56:31.503Z",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-27T14:35:57.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TeamStatistics.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\TeamStatistics.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\TeamStatistics.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\TeamStatistics.cs*",
-              "RelativeToolTip": "Data\\Models\\TeamStatistics.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T14:47:49.307Z",
-              "EditorCaption": ""
+              "Title": "config.txt",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\config\\config.txt",
+              "RelativeDocumentMoniker": "WpfApp\\config\\config.txt",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\config\\config.txt",
+              "RelativeToolTip": "WpfApp\\config\\config.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-27T14:22:25.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MatchDetail.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\MatchDetail.cs",
-              "RelativeDocumentMoniker": "Data\\Models\\MatchDetail.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\MatchDetail.cs*",
-              "RelativeToolTip": "Data\\Models\\MatchDetail.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\App.xaml.cs",
+              "RelativeToolTip": "WpfApp\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T14:45:11.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-26T18:58:35.541Z"
             }
           ]
         }

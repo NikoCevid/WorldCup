@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp.StartupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Postavke" Height="250" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Jezik:" Margin="5" VerticalAlignment="Center" />
+        <ComboBox x:Name="cmbLanguage" Grid.Column="1" Margin="5" Width="150" />
+
+        <TextBlock Text="Prvenstvo:" Grid.Row="1" Margin="5" VerticalAlignment="Center" />
+        <ComboBox x:Name="cmbChampionship" Grid.Row="1" Grid.Column="1" Margin="5" Width="150" />
+
+        <TextBlock Text="Rezolucija:" Grid.Row="2" Margin="5" VerticalAlignment="Center" />
+        <ComboBox x:Name="cmbResolution" Grid.Row="2" Grid.Column="1" Margin="5" Width="150" />
+
+        <Button x:Name="btnApply" Content="Primijeni" Grid.Row="3" HorizontalAlignment="Left" Margin="75,20,0,0" Width="100" Click="btnApply_Click" Grid.Column="1" />
+    </Grid>
+</Window>

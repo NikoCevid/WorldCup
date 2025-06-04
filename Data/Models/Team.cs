@@ -50,6 +50,11 @@ namespace Data.Models
 
         [JsonProperty("goal_differential")]
         public long? GoalDifferential { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Country} ({FifaCode})"; 
+        }
     }
 }
 
