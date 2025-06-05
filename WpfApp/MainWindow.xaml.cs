@@ -46,6 +46,10 @@ namespace WpfApp
                         cmbMyTeam.SelectedItem = teams.FirstOrDefault(t => t.FifaCode?.Trim() == _favTeamCode);
                     }
                 }
+              
+
+                cmbMyTeam.ItemsSource = teams;
+
             }
             catch (Exception ex)
             {
@@ -53,6 +57,7 @@ namespace WpfApp
             }
         }
 
+        
         private async void cmbMyTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbMyTeam.SelectedItem is Team myTeam)
@@ -64,27 +69,39 @@ namespace WpfApp
                     var matches = await _repo.GetMatchDetailsAsync(_favTeamCode);
                     var allTeams = await _repo.GetAllTeamsAsync();
 
-                    MessageBox.Show($"Učitanih utakmica: {matches.Count}\nUkupno timova: {allTeams.Count}");
+                    var debugMatches = matches.Select(m =>
+                        $"{m.HomeTeam?.FifaCode} vs {m.AwayTeam?.FifaCode}");
 
-                    var opponents = matches
-                        .Select(m => m.HomeTeam.FifaCode?.Trim() == _favTeamCode ? m.AwayTeam : m.HomeTeam)
-                        .Select(t => allTeams.FirstOrDefault(x => x.FifaCode?.Trim() == t?.FifaCode?.Trim()))
-                        .Where(t => t != null)
-                        .GroupBy(t => t!.FifaCode)
-                        .Select(g => g.First())
+                    var opponentCodes = matches
+                        .Where(m =>
+                            !string.IsNullOrWhiteSpace(m.HomeTeam?.FifaCode) &&
+                            !string.IsNullOrWhiteSpace(m.AwayTeam?.FifaCode))
+                        .Select(m =>
+                            string.Equals(m.HomeTeam.FifaCode.Trim(), _favTeamCode, StringComparison.OrdinalIgnoreCase)
+                                ? m.AwayTeam.FifaCode.Trim().ToLower()
+                                : m.HomeTeam.FifaCode.Trim().ToLower())
+                        .Where(code => !string.IsNullOrWhiteSpace(code))
+                        .Distinct()
                         .ToList();
 
-                    if (opponents.Count == 0)
-                    {
-                        MessageBox.Show("Nijedan protivnik nije pronađen.");
-                    }
+                    var kodoviUTimovima = allTeams
+                        .Where(t => !string.IsNullOrWhiteSpace(t.FifaCode))
+                        .Select(t => t.FifaCode.Trim().ToLower())
+                        .ToList();
+                    var teamsDict = allTeams
+                        .Where(t => !string.IsNullOrWhiteSpace(t.FifaCode))
+                        .ToDictionary(t => t.FifaCode.Trim().ToLower(), t => t);
 
-                    foreach (var o in opponents)
-                        Console.WriteLine($"Opponent: {o.Country} ({o.FifaCode})");
+                    // Izvuci samo one timove koji postoje
+                    var opponentTeams = opponentCodes
+                        .Where(code => teamsDict.ContainsKey(code))
+                        .Select(code => teamsDict[code])
+                        .ToList();
 
-                    cmbOpponent.ItemsSource = opponents;
+                    cmbOpponent.ItemsSource = opponentTeams;
                     cmbOpponent.SelectedItem = null;
-                    cmbOpponent.IsEnabled = true;
+                    cmbOpponent.IsEnabled = opponentTeams.Any();
+                    btnOpponentDetails.IsEnabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -92,26 +109,53 @@ namespace WpfApp
                 }
             }
         }
+
+
+
         private async void cmbOpponent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbMyTeam.SelectedItem is Team myTeam && cmbOpponent.SelectedItem is Team opponent)
             {
-                var matches = await _repo.GetMatchDetailsAsync(myTeam.FifaCode);
-                _selectedMatch = matches
-                    .FirstOrDefault(m =>
-                        (m.HomeTeam.FifaCode == myTeam.FifaCode && m.AwayTeam.FifaCode == opponent.FifaCode) ||
-                        (m.AwayTeam.FifaCode == myTeam.FifaCode && m.HomeTeam.FifaCode == opponent.FifaCode));
+                var myTeamCode = myTeam.FifaCode?.Trim().ToLower() ?? string.Empty;
+                var opponentCode = opponent.FifaCode?.Trim().ToLower() ?? string.Empty;
 
-                if (_selectedMatch != null)
+                try
                 {
-                    lblScore.Content = $"{_selectedMatch.HomeTeamStatistics?.Goals ?? 0} : {_selectedMatch.AwayTeamStatistics?.Goals ?? 0}";
-                    btnTeamDetails.IsEnabled = true;
-                    btnOpponentDetails.IsEnabled = true;
-                    ShowStartingEleven();
+                    var matches = await _repo.GetMatchDetailsAsync(myTeam.FifaCode);
+
+
+                    var allMatchCodes = matches.Select(m =>
+                        $"{m.HomeTeam?.FifaCode?.ToLower()} vs {m.AwayTeam?.FifaCode?.ToLower()}");
+
+
+                    _selectedMatch = matches.FirstOrDefault(m =>
+                    {
+                        var homeCode = m.HomeTeam?.FifaCode?.Trim().ToLower();
+                        var awayCode = m.AwayTeam?.FifaCode?.Trim().ToLower();
+
+                        return (homeCode == myTeamCode && awayCode == opponentCode) ||
+                               (homeCode == opponentCode && awayCode == myTeamCode);
+                    });
+
+                    if (_selectedMatch != null)
+                    {
+                        int homeGoals = _selectedMatch.HomeTeamStatistics?.Goals ?? 0;
+                        int awayGoals = _selectedMatch.AwayTeamStatistics?.Goals ?? 0;
+
+                        lblScore.Content = $"{homeGoals} : {awayGoals}";
+                        btnTeamDetails.IsEnabled = true;
+                        btnOpponentDetails.IsEnabled = true;
+
+                        ShowStartingEleven();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Utakmica nije pronađena.");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Utakmica nije pronađena.");
+                    MessageBox.Show("Greška prilikom dohvaćanja podataka o utakmici: " + ex.Message);
                 }
             }
         }

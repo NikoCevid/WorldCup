@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\World-Cup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\config\\config.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\config\\config.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\models\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\repo\\apirepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\repo\\apirepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\app.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\app.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|c:\\users\\user\\desktop\\world-cup\\data\\repo\\repofactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87548BBF-CF3E-47BD-8379-6223900DA92F}|Data\\Data.csproj|solutionrelative:data\\repo\\repofactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\playercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\playercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,47 +38,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\Team.cs",
+              "RelativeDocumentMoniker": "Data\\Models\\Team.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Models\\Team.cs",
+              "RelativeToolTip": "Data\\Models\\Team.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAYwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T13:09:21.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "APIRepo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\APIRepo.cs",
+              "RelativeDocumentMoniker": "Data\\Repo\\APIRepo.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\APIRepo.cs",
+              "RelativeToolTip": "Data\\Repo\\APIRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T16:55:47.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RepoFactory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\RepoFactory.cs",
+              "RelativeDocumentMoniker": "Data\\Repo\\RepoFactory.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\Data\\Repo\\RepoFactory.cs",
+              "RelativeToolTip": "Data\\Repo\\RepoFactory.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwDoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T13:37:29.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerControl.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerControl.xaml",
+              "RelativeDocumentMoniker": "WpfApp\\PlayerControl.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerControl.xaml",
+              "RelativeToolTip": "WpfApp\\PlayerControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-04T12:38:04.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml.cs",
               "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAwwDUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAADsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T14:36:00.506Z"
+              "WhenOpened": "2025-05-27T14:36:00.506Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml",
               "RelativeToolTip": "WpfApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-27T14:35:57.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T14:35:57.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "config.txt",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\config\\config.txt",
-              "RelativeDocumentMoniker": "WpfApp\\config\\config.txt",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\config\\config.txt",
-              "RelativeToolTip": "WpfApp\\config\\config.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-27T14:22:25.315Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\App.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp\\App.xaml.cs",
@@ -75,6 +127,24 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T18:58:35.541Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             }
           ]
         }

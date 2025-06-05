@@ -18,8 +18,29 @@ namespace Data.Models
         [JsonProperty("alternate_name")]
         public object? AlternateName { get; set; }
 
+        //[JsonProperty("fifa_code")]
+        //public string? FifaCode { get; set; }
+
+        private string? _fifaCode;
+
         [JsonProperty("fifa_code")]
-        public string? FifaCode { get; set; }
+        public string? FifaCode1
+        {
+            set => _fifaCode = value;
+        }
+
+        [JsonProperty("code")]
+        public string? FifaCode2
+        {
+            set => _fifaCode = value;
+        }
+
+        [JsonIgnore]
+        public string? FifaCode
+        {
+            get => _fifaCode;
+        }
+
 
         [JsonProperty("group_id")]
         public long? GroupId { get; set; }
