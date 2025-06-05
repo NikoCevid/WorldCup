@@ -22,7 +22,6 @@ namespace WpfApp
         {
             InitializeComponent();
             _repo = RepoFactory.CreateRepo();
-
             this.Loaded += async (_, __) => await LoadAsync();
         }
 
@@ -32,9 +31,13 @@ namespace WpfApp
             {
                 var teams = await _repo.GetAllTeamsAsync();
                 cmbMyTeam.ItemsSource = teams;
+                cmbMyTeam.SelectedIndex = -1; // Spriječi auto-odabir
+
+                cmbOpponent.ItemsSource = null;
                 cmbOpponent.IsEnabled = false;
                 btnTeamDetails.IsEnabled = false;
                 btnOpponentDetails.IsEnabled = false;
+                lblScore.Content = "0 : 0";
 
                 if (File.Exists(SettingsPath))
                 {
@@ -42,14 +45,15 @@ namespace WpfApp
                     var favLine = lines.FirstOrDefault(l => l.StartsWith("FavoriteTeam="));
                     if (favLine != null)
                     {
-                        _favTeamCode = favLine.Split('=')[1].Trim();
-                        cmbMyTeam.SelectedItem = teams.FirstOrDefault(t => t.FifaCode?.Trim() == _favTeamCode);
+                        _favTeamCode = favLine.Split('=')[1].Trim().ToUpper();
+                        var selectedTeam = teams.FirstOrDefault(t => t.FifaCode?.Trim().ToUpper() == _favTeamCode);
+
+                        if (selectedTeam != null)
+                        {
+                            cmbMyTeam.SelectedItem = selectedTeam;
+                        }
                     }
                 }
-              
-
-                cmbMyTeam.ItemsSource = teams;
-
             }
             catch (Exception ex)
             {
@@ -57,7 +61,6 @@ namespace WpfApp
             }
         }
 
-        
         private async void cmbMyTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbMyTeam.SelectedItem is Team myTeam)
@@ -69,30 +72,20 @@ namespace WpfApp
                     var matches = await _repo.GetMatchDetailsAsync(_favTeamCode);
                     var allTeams = await _repo.GetAllTeamsAsync();
 
-                    var debugMatches = matches.Select(m =>
-                        $"{m.HomeTeam?.FifaCode} vs {m.AwayTeam?.FifaCode}");
-
                     var opponentCodes = matches
-                        .Where(m =>
-                            !string.IsNullOrWhiteSpace(m.HomeTeam?.FifaCode) &&
-                            !string.IsNullOrWhiteSpace(m.AwayTeam?.FifaCode))
+                        .Where(m => !string.IsNullOrWhiteSpace(m.HomeTeam?.FifaCode) &&
+                                    !string.IsNullOrWhiteSpace(m.AwayTeam?.FifaCode))
                         .Select(m =>
                             string.Equals(m.HomeTeam.FifaCode.Trim(), _favTeamCode, StringComparison.OrdinalIgnoreCase)
                                 ? m.AwayTeam.FifaCode.Trim().ToLower()
                                 : m.HomeTeam.FifaCode.Trim().ToLower())
-                        .Where(code => !string.IsNullOrWhiteSpace(code))
                         .Distinct()
                         .ToList();
 
-                    var kodoviUTimovima = allTeams
-                        .Where(t => !string.IsNullOrWhiteSpace(t.FifaCode))
-                        .Select(t => t.FifaCode.Trim().ToLower())
-                        .ToList();
                     var teamsDict = allTeams
                         .Where(t => !string.IsNullOrWhiteSpace(t.FifaCode))
                         .ToDictionary(t => t.FifaCode.Trim().ToLower(), t => t);
 
-                    // Izvuci samo one timove koji postoje
                     var opponentTeams = opponentCodes
                         .Where(code => teamsDict.ContainsKey(code))
                         .Select(code => teamsDict[code])
@@ -110,8 +103,6 @@ namespace WpfApp
             }
         }
 
-
-
         private async void cmbOpponent_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbMyTeam.SelectedItem is Team myTeam && cmbOpponent.SelectedItem is Team opponent)
@@ -122,11 +113,6 @@ namespace WpfApp
                 try
                 {
                     var matches = await _repo.GetMatchDetailsAsync(myTeam.FifaCode);
-
-
-                    var allMatchCodes = matches.Select(m =>
-                        $"{m.HomeTeam?.FifaCode?.ToLower()} vs {m.AwayTeam?.FifaCode?.ToLower()}");
-
 
                     _selectedMatch = matches.FirstOrDefault(m =>
                     {
@@ -146,7 +132,8 @@ namespace WpfApp
                         btnTeamDetails.IsEnabled = true;
                         btnOpponentDetails.IsEnabled = true;
 
-                        ShowStartingEleven();
+                        bool isMyTeamHome = _selectedMatch.HomeTeam?.FifaCode?.Trim().ToLower() == myTeamCode;
+                        ShowStartingEleven(isMyTeamHome);
                     }
                     else
                     {
@@ -160,58 +147,61 @@ namespace WpfApp
             }
         }
 
-        private void ShowStartingEleven()
+        private void ShowStartingEleven(bool isMyTeamHome)
         {
-            canvasPlayers.Children.Clear();
+            spHomeGK.Children.Clear(); spHomeDEF.Children.Clear(); spHomeMID.Children.Clear(); spHomeATT.Children.Clear();
+            spAwayGK.Children.Clear(); spAwayDEF.Children.Clear(); spAwayMID.Children.Clear(); spAwayATT.Children.Clear();
 
-            var home = _selectedMatch?.HomeTeamStatistics?.StartingEleven;
-            if (home != null && home.Any()) AddPlayersToSide(home, true);
-
-            var away = _selectedMatch?.AwayTeamStatistics?.StartingEleven;
-            if (away != null && away.Any()) AddPlayersToSide(away, false);
-        }
-
-        private void AddPlayersToSide(List<StartingEleven> players, bool isLeft)
-        {
-            var posGroups = new[] { Position.Goalie, Position.Defender, Position.Midfield, Position.Forward };
-
-            double canvasWidth = canvasPlayers.ActualWidth;
-            double totalHeight = 500;
-            double rowHeight = totalHeight / posGroups.Length;
-
-            for (int row = 0; row < posGroups.Length; row++)
+            if (isMyTeamHome)
             {
-                var group = players.Where(p => p.Position == posGroups[row]).ToList();
-                int count = group.Count;
-                double y = row * rowHeight + 20;
-
-                for (int i = 0; i < count; i++)
-                {
-                    var player = group[i];
-                    var control = new PlayerControl(player);
-
-                    double spacing = canvasWidth / (count + 1);
-                    double x = spacing * (i + 1);
-                    if (!isLeft) x = canvasWidth - x;
-
-                    Canvas.SetLeft(control, x - control.Width / 2);
-                    Canvas.SetTop(control, y);
-                    canvasPlayers.Children.Add(control);
-
-                    AnimateFadeIn(control);
-                }
+                AddPlayersToPanel(_selectedMatch?.HomeTeamStatistics?.StartingEleven, true);
+                AddPlayersToPanel(_selectedMatch?.AwayTeamStatistics?.StartingEleven, false);
+            }
+            else
+            {
+                AddPlayersToPanel(_selectedMatch?.AwayTeamStatistics?.StartingEleven, true);
+                AddPlayersToPanel(_selectedMatch?.HomeTeamStatistics?.StartingEleven, false);
             }
         }
 
-        private void AnimateFadeIn(UIElement element, double durationSeconds = 0.3)
+        private void AddPlayersToPanel(System.Collections.Generic.List<StartingEleven>? players, bool isHome)
         {
-            var animation = new DoubleAnimation
+            if (players == null) return;
+
+            var gk = players.Where(p => p.Position == Position.Goalie).Take(1).ToList();
+            var def = players.Where(p => p.Position == Position.Defender).Take(4).ToList();
+            var mid = players.Where(p => p.Position == Position.Midfield).Take(3).ToList();
+            var att = players.Where(p => p.Position == Position.Forward).Take(3).ToList();
+
+            int total = gk.Count + def.Count + mid.Count + att.Count;
+
+            var all = players.Where(p => p.Position != Position.Goalie).ToList();
+            while (total < 11 && all.Count > 0)
             {
-                From = 0,
-                To = 1,
-                Duration = TimeSpan.FromSeconds(durationSeconds)
-            };
-            element.BeginAnimation(UIElement.OpacityProperty, animation);
+                var next = all.First();
+                if (!def.Contains(next) && def.Count < 4)
+                    def.Add(next);
+                else if (!mid.Contains(next) && mid.Count < 3)
+                    mid.Add(next);
+                else if (!att.Contains(next) && att.Count < 3)
+                    att.Add(next);
+                all.Remove(next);
+                total++;
+            }
+
+            void AddToPanel(StackPanel panel, StartingEleven player)
+            {
+                var control = new PlayerControl(player)
+                {
+                    Margin = new Thickness(10, 10, 10, 10) // povećani razmak
+                };
+                panel.Children.Add(control);
+            }
+
+            foreach (var p in gk) AddToPanel(isHome ? spHomeGK : spAwayGK, p);
+            foreach (var p in def) AddToPanel(isHome ? spHomeDEF : spAwayDEF, p);
+            foreach (var p in mid) AddToPanel(isHome ? spHomeMID : spAwayMID, p);
+            foreach (var p in att) AddToPanel(isHome ? spHomeATT : spAwayATT, p);
         }
 
         private async void btnTeamDetails_Click(object sender, RoutedEventArgs e)

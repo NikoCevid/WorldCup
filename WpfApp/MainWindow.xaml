@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="Pregled Reprezentacija" Height="600" Width="900">
+        Title="Pregled Reprezentacija" Height="800" Width="1000">
+
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -13,30 +14,49 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Red 1: odabir timova i rezultat -->
+        <!-- Red 1: ComboBox timova i rezultat -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
             <ComboBox x:Name="cmbMyTeam" Width="200" Margin="5" SelectionChanged="cmbMyTeam_SelectionChanged" />
-
             <ComboBox x:Name="cmbOpponent" Width="200" Margin="5" SelectionChanged="cmbOpponent_SelectionChanged" />
-
-            <Label x:Name="lblScore"
-                   Content="0 : 0"
-                   FontSize="16"
-                   FontWeight="Bold"
-                   VerticalAlignment="Center"
-                   Margin="10"/>
+            <Label x:Name="lblScore" Content="0 : 0" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" Margin="10"/>
         </StackPanel>
 
-        <!-- Red 2: gumbi -->
+        <!-- Red 2: Gumbi -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Margin="0,0,0,10">
             <Button x:Name="btnTeamDetails" Content="Detalji moje rep." Margin="5" Width="150" Click="btnTeamDetails_Click"/>
             <Button x:Name="btnOpponentDetails" Content="Detalji protivnika" Margin="5" Width="150" Click="btnOpponentDetails_Click"/>
         </StackPanel>
 
-        <!-- Red 3: teren + canvas -->
+        <!-- Red 3: teren + igrači -->
         <Grid Grid.Row="2">
-            <Image Source="Resources/field.png" Stretch="Fill" Height="500" VerticalAlignment="Top" />
-            <Canvas x:Name="canvasPlayers" IsHitTestVisible="False" Panel.ZIndex="1" />
+            <!-- Pozadina: teren -->
+            <Image Source="pack://application:,,,/Resources/teren.png" Stretch="Fill" Panel.ZIndex="0"/>
+
+            <!-- 8 zona za igrače -->
+            <Grid Panel.ZIndex="1" Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- HOME -->
+                <StackPanel x:Name="spHomeGK" Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10"/>
+                <StackPanel x:Name="spHomeDEF" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10"/>
+                <StackPanel x:Name="spHomeMID" Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10"/>
+                <StackPanel x:Name="spHomeATT" Grid.Column="3" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10"/>
+
+                <!-- AWAY -->
+                <StackPanel x:Name="spAwayATT" Grid.Column="4" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10"/>
+                <StackPanel x:Name="spAwayMID" Grid.Column="5" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10"/>
+                <StackPanel x:Name="spAwayDEF" Grid.Column="6" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10"/>
+                <StackPanel x:Name="spAwayGK" Grid.Column="7" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10"/>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

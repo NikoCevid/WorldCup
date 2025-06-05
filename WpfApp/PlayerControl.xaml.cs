@@ -15,9 +15,10 @@ namespace WpfApp
 
             string imgPath = $"Resources/{player.Name.Replace(" ", "_").ToLower()}.png";
             if (!System.IO.File.Exists(imgPath))
-                imgPath = "Resources/default-player.png";
+                imgPath = "Resources/dres.jpg";
 
-            imgPlayer.Source = new BitmapImage(new Uri(imgPath, UriKind.Relative));
+            imgShirt.Source = new BitmapImage(new Uri(imgPath, UriKind.Relative));
+
         }
     }
 }
