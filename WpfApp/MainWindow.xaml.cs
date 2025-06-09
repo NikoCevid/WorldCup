@@ -1,10 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
+using System.Windows.Shapes;
 using Data;
 using Data.Enums;
 using Data.Models;
@@ -29,6 +31,26 @@ namespace WpfApp
         {
             try
             {
+                string mode = "api";          // default način učitavanja
+                string championship = "men";  // default spol
+
+                // Učitavanje postavki iz wpf_settings.txt
+                if (File.Exists("config/wpf_settings.txt"))
+                {
+                    var lines = File.ReadAllLines("config/wpf_settings.txt");
+
+                    var modeLine = lines.FirstOrDefault(l => l.StartsWith("Mode="));
+                    if (modeLine != null)
+                        mode = modeLine.Split('=')[1].Trim().ToLower();
+
+                    var champLine = lines.FirstOrDefault(l => l.StartsWith("Championship="));
+                    if (champLine != null)
+                        championship = champLine.Split('=')[1].Trim().ToLower();
+                }
+
+                // Inicijalizacija repozitorija prema načinu i spolu
+                _repo = RepoFactory.CreateRepo(mode, championship);
+
                 var teams = await _repo.GetAllTeamsAsync();
                 cmbMyTeam.ItemsSource = teams;
                 cmbMyTeam.SelectedIndex = -1; // Spriječi auto-odabir
@@ -60,6 +82,8 @@ namespace WpfApp
                 MessageBox.Show("Greška pri učitavanju reprezentacija: " + ex.Message);
             }
         }
+
+
 
         private async void cmbMyTeam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -125,19 +149,28 @@ namespace WpfApp
 
                     if (_selectedMatch != null)
                     {
-                        int homeGoals = _selectedMatch.HomeTeamStatistics?.Goals ?? 0;
-                        int awayGoals = _selectedMatch.AwayTeamStatistics?.Goals ?? 0;
 
-                        lblScore.Content = $"{homeGoals} : {awayGoals}";
+                        bool isMyTeamHome = _selectedMatch.HomeTeam?.FifaCode?.Trim().ToLower() == myTeamCode;
+
+                        int homeGoals = _selectedMatch.HomeTeamEvents?
+                            .Count(e => e.TypeOfEvent == TypeOfEvent.Goal || e.TypeOfEvent == TypeOfEvent.GoalPenalty) ?? 0;
+
+                        int awayGoals = _selectedMatch.AwayTeamEvents?
+                            .Count(e => e.TypeOfEvent == TypeOfEvent.Goal || e.TypeOfEvent == TypeOfEvent.GoalPenalty) ?? 0;
+
+                        lblScore.Content = isMyTeamHome
+                            ? $"{homeGoals} : {awayGoals}"
+                            : $"{awayGoals} : {homeGoals}";
+
                         btnTeamDetails.IsEnabled = true;
                         btnOpponentDetails.IsEnabled = true;
 
-                        bool isMyTeamHome = _selectedMatch.HomeTeam?.FifaCode?.Trim().ToLower() == myTeamCode;
                         ShowStartingEleven(isMyTeamHome);
                     }
                     else
                     {
                         MessageBox.Show("Utakmica nije pronađena.");
+                        lblScore.Content = "0 : 0";
                     }
                 }
                 catch (Exception ex)
@@ -146,6 +179,8 @@ namespace WpfApp
                 }
             }
         }
+
+
 
         private void ShowStartingEleven(bool isMyTeamHome)
         {
@@ -164,7 +199,7 @@ namespace WpfApp
             }
         }
 
-        private void AddPlayersToPanel(System.Collections.Generic.List<StartingEleven>? players, bool isHome)
+        private void AddPlayersToPanel(List<StartingEleven>? players, bool isHome)
         {
             if (players == null) return;
 
@@ -193,8 +228,16 @@ namespace WpfApp
             {
                 var control = new PlayerControl(player)
                 {
-                    Margin = new Thickness(10, 10, 10, 10) // povećani razmak
+                    Margin = new Thickness(10)
                 };
+
+                // 📌 Dodaj klik event koji otvara PlayerDetailsWindow
+                control.MouseLeftButtonUp += (s, e) =>
+                {
+                    var window = new PlayerDetailsWindow(player, _selectedMatch, isHome);
+                    window.ShowDialog();
+                };
+
                 panel.Children.Add(control);
             }
 
@@ -203,6 +246,7 @@ namespace WpfApp
             foreach (var p in mid) AddToPanel(isHome ? spHomeMID : spAwayMID, p);
             foreach (var p in att) AddToPanel(isHome ? spHomeATT : spAwayATT, p);
         }
+
 
         private async void btnTeamDetails_Click(object sender, RoutedEventArgs e)
         {

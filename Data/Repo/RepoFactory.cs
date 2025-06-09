@@ -40,7 +40,7 @@ namespace Data
         }
 
         // Interna metoda koja prihvaća oba parametra
-        private static IRepo CreateRepo(string mode, string championship)
+        public static IRepo CreateRepo(string mode, string championship)
         {
             switch (mode)
             {

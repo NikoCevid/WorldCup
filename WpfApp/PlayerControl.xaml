@@ -12,7 +12,7 @@
                        TextAlignment="Center" TextWrapping="Wrap" />
 
             <!-- Broj dresa -->
-            <TextBlock x:Name="txtNumber" Text="#10" FontSize="10" 
+            <TextBlock x:Name="txtNumber" Text="" FontSize="10" 
                        FontWeight="SemiBold" TextAlignment="Center"/>
         </StackPanel>
     </Border>

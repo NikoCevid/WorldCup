@@ -18,8 +18,6 @@ namespace Data.Models
         [JsonProperty("alternate_name")]
         public object? AlternateName { get; set; }
 
-        //[JsonProperty("fifa_code")]
-        //public string? FifaCode { get; set; }
 
         private string? _fifaCode;
 

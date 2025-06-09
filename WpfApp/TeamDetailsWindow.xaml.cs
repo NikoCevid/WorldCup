@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
+using Data.Enums;
 using Data.Models;
 
 namespace WpfApp
@@ -16,9 +18,18 @@ namespace WpfApp
 
             foreach (var match in matches)
             {
-                bool isHome = match.HomeTeam.FifaCode == team.FifaCode;
-                var myGoals = isHome ? match.HomeTeamStatistics.Goals : match.AwayTeamStatistics.Goals;
-                var oppGoals = isHome ? match.AwayTeamStatistics.Goals : match.HomeTeamStatistics.Goals;
+                bool isHome = match.HomeTeam?.FifaCode?.Trim().ToUpper() == team.FifaCode?.Trim().ToUpper();
+                bool isAway = match.AwayTeam?.FifaCode?.Trim().ToUpper() == team.FifaCode?.Trim().ToUpper();
+                if (!isHome && !isAway) continue;
+
+                int homeGoals = match.HomeTeamEvents?.Count(e =>
+                    e.TypeOfEvent == TypeOfEvent.Goal || e.TypeOfEvent == TypeOfEvent.GoalPenalty) ?? 0;
+
+                int awayGoals = match.AwayTeamEvents?.Count(e =>
+                    e.TypeOfEvent == TypeOfEvent.Goal || e.TypeOfEvent == TypeOfEvent.GoalPenalty) ?? 0;
+
+                int myGoals = isHome ? homeGoals : awayGoals;
+                int oppGoals = isHome ? awayGoals : homeGoals;
 
                 goalsFor += myGoals;
                 goalsAgainst += oppGoals;

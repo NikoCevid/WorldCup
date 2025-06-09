@@ -15,7 +15,7 @@ namespace WpfApp
 
             string imgPath = $"Resources/{player.Name.Replace(" ", "_").ToLower()}.png";
             if (!System.IO.File.Exists(imgPath))
-                imgPath = "Resources/dres.jpg";
+                imgPath = "Resources/funcuti.jpeg";
 
             imgShirt.Source = new BitmapImage(new Uri(imgPath, UriKind.Relative));
 

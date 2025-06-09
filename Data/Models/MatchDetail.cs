@@ -79,6 +79,7 @@ namespace Data.Models
 
         [JsonProperty("last_score_update_at")]
         public DateTimeOffset? LastScoreUpdateAt { get; set; }
+
     }
 
 }
