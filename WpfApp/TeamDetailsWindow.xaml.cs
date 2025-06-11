@@ -39,7 +39,12 @@ namespace WpfApp
                 else losses++;
             }
 
-            lblPlayed.Content = matches.Length;
+            int played = matches.Count(m =>
+     m.HomeTeam?.FifaCode?.Trim().ToUpper() == team.FifaCode?.Trim().ToUpper() ||
+     m.AwayTeam?.FifaCode?.Trim().ToUpper() == team.FifaCode?.Trim().ToUpper());
+
+            lblPlayed.Content = played;
+
             lblWins.Content = wins;
             lblDraws.Content = draws;
             lblLosses.Content = losses;

@@ -1,14 +1,7 @@
 ﻿using Data;
 using Data.Models;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using WinFormsApp.Helpers;
 
 namespace WinFormsApp
@@ -46,7 +39,8 @@ namespace WinFormsApp
             repo = RepoFactory.CreateRepo();
             await LoadMatchDataAsync();
             await LoadTeamsAsync();
-            LoadFavPlayers();
+            LoadFavPlayers(selectedFifaCode); // ✅
+
         }
 
         private async Task LoadMatchDataAsync()
@@ -127,6 +121,8 @@ namespace WinFormsApp
                 pnlPlayers.Controls.Add(control);
 
             }
+            LoadFavPlayers(selectedFifaCode);
+
         }
 
         public void SelectPlayer(StartingEleven player)
@@ -153,6 +149,13 @@ namespace WinFormsApp
         {
             if (selectedPlayer == null) return;
 
+            // Ograničenje: maksimalno 3 omiljena igrača
+            if (pnlFavPlayers.Controls.OfType<PlayerControl>().Count() >= 3)
+            {
+                MessageBox.Show("Možete dodati najviše 3 omiljena igrača.", "Ograničenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Provjeri postoji li već isti igrač u panelu
             foreach (Control ctrl in pnlFavPlayers.Controls)
             {
@@ -172,6 +175,7 @@ namespace WinFormsApp
             // Spremi favorite
             SaveFavPlayers();
         }
+
 
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -221,45 +225,72 @@ namespace WinFormsApp
 
         private void SaveFavPlayers()
         {
-            var favs = new List<string>();
+            var allLines = File.Exists(FavPlayersFile)
+                ? File.ReadAllLines(FavPlayersFile).ToList()
+                : new List<string>();
 
+            // Ukloni stare favorite za trenutnu reprezentaciju
+            allLines.RemoveAll(line => line.StartsWith($"{selectedFifaCode};"));
+
+            // Dodaj nove
             foreach (Control ctrl in pnlFavPlayers.Controls)
             {
                 if (ctrl is PlayerControl pc)
                 {
-                    favs.Add(pc.PlayerData.Name); 
+                    allLines.Add($"{selectedFifaCode};{pc.PlayerData.Name}");
                 }
             }
 
-            File.WriteAllLines(FavPlayersFile, favs);
+            File.WriteAllLines(FavPlayersFile, allLines);
         }
 
 
-        private void LoadFavPlayers()
+
+        private void LoadFavPlayers(string fifaCode)
         {
+            pnlFavPlayers.Controls.Clear();
+
             if (!File.Exists(FavPlayersFile)) return;
 
             var lines = File.ReadAllLines(FavPlayersFile);
 
-            foreach (var name in lines)
+            var playerNames = lines
+                .Where(line => line.StartsWith(fifaCode + ";"))
+                .Select(line => line.Substring(fifaCode.Length + 1))
+                .ToList();
+
+            var players = GetPlayersByNames(playerNames);
+
+            foreach (var player in players)
             {
-                Label favLabel = new Label
-                {
-                    Text = name,
-                    Width = pnlFavPlayers.Width - 25,
-                    Height = 30,
-                    Margin = new Padding(5),
-                    BorderStyle = BorderStyle.FixedSingle
-                };
-
-                favLabel.Click += (s, ev) =>
-                {
-                    lblName.Text = name;
-                    lblFavPlayer.Text = "Omiljeni igrač";
-                };
-
-                pnlFavPlayers.Controls.Add(favLabel);
+                var control = new PlayerControl(player, isFavourite: true);
+                pnlFavPlayers.Controls.Add(control);
             }
+        }
+
+        private List<StartingEleven> GetPlayersByNames(List<string> names)
+        {
+            var teamMatches = matchList
+                .Where(m => m.HomeTeam.FifaCode == selectedFifaCode || m.AwayTeam.FifaCode == selectedFifaCode)
+                .ToList();
+
+            var players = new List<StartingEleven>();
+
+            foreach (var match in teamMatches)
+            {
+                var teamStats = match.HomeTeam.FifaCode == selectedFifaCode
+                    ? match.HomeTeamStatistics
+                    : match.AwayTeamStatistics;
+
+                players.AddRange(teamStats.StartingEleven);
+                players.AddRange(teamStats.Substitutes);
+            }
+
+            return players
+                .Where(p => names.Contains(p.Name))
+                .GroupBy(p => p.Name)
+                .Select(g => g.First())
+                .ToList();
         }
 
         private void Panel_DragEnter(object sender, DragEventArgs e)

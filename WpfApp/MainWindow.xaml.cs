@@ -158,9 +158,13 @@ namespace WpfApp
                         int awayGoals = _selectedMatch.AwayTeamEvents?
                             .Count(e => e.TypeOfEvent == TypeOfEvent.Goal || e.TypeOfEvent == TypeOfEvent.GoalPenalty) ?? 0;
 
+
+
                         lblScore.Content = isMyTeamHome
                             ? $"{homeGoals} : {awayGoals}"
                             : $"{awayGoals} : {homeGoals}";
+
+
 
                         btnTeamDetails.IsEnabled = true;
                         btnOpponentDetails.IsEnabled = true;

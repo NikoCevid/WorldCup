@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\World-Cup\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\playercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\playercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\playercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\playercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\playerdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\playerdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\playerdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\playerdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\startupwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\startupwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\teamdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\teamdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|c:\\users\\user\\desktop\\world-cup\\wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{3902DD0E-B06C-4860-8545-B64C4BC49849}|WpfApp\\WpfApp.csproj|solutionrelative:wpfapp\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\user\\desktop\\world-cup\\winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC3776A1-A198-4429-A859-888911C5B422}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,101 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerControl.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerControl.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\PlayerControl.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerControl.xaml.cs",
-              "RelativeToolTip": "WpfApp\\PlayerControl.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\MainForm.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
+              "RelativeToolTip": "WinFormsApp\\MainForm.cs",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAewOMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T22:40:09.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StartupWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\StartupWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\StartupWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\StartupWindow.xaml",
-              "RelativeToolTip": "WpfApp\\StartupWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:40:04.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TeamDetailsWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\TeamDetailsWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\TeamDetailsWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\TeamDetailsWindow.xaml",
-              "RelativeToolTip": "WpfApp\\TeamDetailsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:40:03.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "WpfApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAkwPgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T22:33:02.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\MainWindow.xaml",
-              "RelativeToolTip": "WpfApp\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:32:59.635Z",
+              "WhenOpened": "2025-06-11T19:02:44.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlayerControl.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerControl.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\PlayerControl.xaml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerControl.xaml",
-              "RelativeToolTip": "WpfApp\\PlayerControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:19:46.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerDetailsWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerDetailsWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WpfApp\\PlayerDetailsWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerDetailsWindow.xaml.cs",
-              "RelativeToolTip": "WpfApp\\PlayerDetailsWindow.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAtwBoAAAAAAAAAAAAAAA==",
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\MainForm.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WinFormsApp\\MainForm.cs [Design]",
+              "RelativeToolTip": "WinFormsApp\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T22:16:31.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerDetailsWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerDetailsWindow.xaml",
-              "RelativeDocumentMoniker": "WpfApp\\PlayerDetailsWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\World-Cup\\WpfApp\\PlayerDetailsWindow.xaml",
-              "RelativeToolTip": "WpfApp\\PlayerDetailsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-09T22:16:04.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T19:02:38.815Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },
