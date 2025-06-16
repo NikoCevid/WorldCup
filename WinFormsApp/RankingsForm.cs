@@ -136,24 +136,24 @@ namespace WinFormsApp
         private string GeneratePrintableContent()
         {
             var sb = new StringBuilder();
-            sb.AppendLine(" RANG LISTE IGRAČA I UTAKMICA");
+            sb.AppendLine(" RANK LIST OF PLAYERS AND GAMES");
             sb.AppendLine();
 
-            sb.AppendLine(" Najviše golova:");
+            sb.AppendLine(" Most goals:");
             foreach (PlayerControl pc in flpGoals.Controls)
             {
-                sb.AppendLine($"- {pc.PlayerData.Name} ({pc.StatValue} golova)");
+                sb.AppendLine($"- {pc.PlayerData.Name} ({pc.StatValue} goals)");
             }
 
             sb.AppendLine();
-            sb.AppendLine(" Najviše žutih kartona:");
+            sb.AppendLine(" Most yellow cards:");
             foreach (PlayerControl pc in flpCards.Controls)
             {
-                sb.AppendLine($"- {pc.PlayerData.Name} ({pc.StatValue} žutih kartona)");
+                sb.AppendLine($"- {pc.PlayerData.Name} ({pc.StatValue} yellow cards)");
             }
 
             sb.AppendLine();
-            sb.AppendLine(" Najposjećenije utakmice:");
+            sb.AppendLine(" Biggest attendance:");
             foreach (AttendanceControl ac in flpAttendance.Controls)
             {
                 sb.AppendLine($"- {ac.Controls["lblLocation"].Text} | {ac.Controls["lblAttendance"].Text} | {ac.Controls["lblTeams"].Text}");

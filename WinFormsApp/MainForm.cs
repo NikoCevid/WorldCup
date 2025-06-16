@@ -132,16 +132,16 @@ namespace WinFormsApp
             lblName.Text = player.Name;
             lblShirt.Text = player.ShirtNumber.ToString();
             lblPosition.Text = player.Position.ToString();
-            lblCaptain.Text = player.Captain ? "Da" : "Ne";
+            lblCaptain.Text = player.Captain ? "Yes" : "No";
 
             //  Provjeri je li već u favoritima
             bool isFavourite = pnlFavPlayers.Controls
                 .OfType<PlayerControl>()
-                .Any(pc => pc.PlayerData.Name == player.Name &&
+                .Any(pc => pc.PlayerData.Name == player.Name && 
                            pc.PlayerData.ShirtNumber == player.ShirtNumber);
             pictureBox.Image = ImageHelper.LoadEmbeddedImage("WinFormsApp.Resources.default-player.png");
 
-            lblFavPlayer.Text = isFavourite ? "Omiljeni" : "Nije dodan";
+            lblFavPlayer.Text = isFavourite ? "Favourite" : "Not added";
         }
 
 
@@ -152,7 +152,7 @@ namespace WinFormsApp
             // Ograničenje: maksimalno 3 omiljena igrača
             if (pnlFavPlayers.Controls.OfType<PlayerControl>().Count() >= 3)
             {
-                MessageBox.Show("Možete dodati najviše 3 omiljena igrača.", "Ograničenje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You can add max 3 players.", "Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -170,7 +170,7 @@ namespace WinFormsApp
             pnlFavPlayers.Controls.Add(playerControl);
 
             // Promijeni labelu
-            lblFavPlayer.Text = "Omiljeni igrač";
+            lblFavPlayer.Text = "Favourite player";
 
             // Spremi favorite
             SaveFavPlayers();
@@ -190,7 +190,7 @@ namespace WinFormsApp
                     pc.PlayerData.ShirtNumber == selectedPlayer.ShirtNumber)
                 {
                     pnlFavPlayers.Controls.Remove(pc);
-                    lblFavPlayer.Text = "Nije dodan";
+                    lblFavPlayer.Text = "Not added";
                     SaveFavPlayers();
                     return;
                 }
@@ -200,7 +200,7 @@ namespace WinFormsApp
                     lbl.Text.Contains(selectedPlayer.Name))
                 {
                     pnlFavPlayers.Controls.Remove(lbl);
-                    lblFavPlayer.Text = "Nije dodan";
+                    lblFavPlayer.Text = "Not added";
                     SaveFavPlayers();
                     return;
                 }
@@ -362,7 +362,7 @@ namespace WinFormsApp
         {
             if (string.IsNullOrEmpty(selectedFifaCode) || matchList == null)
             {
-                MessageBox.Show("Prvo odaberi reprezentaciju!");
+                MessageBox.Show("Select a team!");
                 return;
             }
 
@@ -371,7 +371,7 @@ namespace WinFormsApp
 
             if (selectedCountry == null)
             {
-                MessageBox.Show("Greška: Country nije pronađen.");
+                MessageBox.Show("Warning: Country not found.");
                 return;
             }
 

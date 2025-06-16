@@ -30,95 +30,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel = new TableLayoutPanel();
-            this.lblGoals = new Label();
-            this.lblCards = new Label();
-            this.lblAttendance = new Label();
-            this.flpGoals = new FlowLayoutPanel();
-            this.flpCards = new FlowLayoutPanel();
-            this.flpAttendance = new FlowLayoutPanel();
-            this.btnExport = new Button();
-            this.SuspendLayout();
-
+            tableLayoutPanel = new TableLayoutPanel();
+            lblGoals = new Label();
+            lblCards = new Label();
+            lblAttendance = new Label();
+            flpGoals = new FlowLayoutPanel();
+            flpCards = new FlowLayoutPanel();
+            flpAttendance = new FlowLayoutPanel();
+            btnExport = new Button();
+            tableLayoutPanel.SuspendLayout();
+            SuspendLayout();
             // 
             // tableLayoutPanel
             // 
-            this.tableLayoutPanel.ColumnCount = 3;
-            this.tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
-            this.tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
-            this.tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.34F));
-            this.tableLayoutPanel.RowCount = 3;
-            this.tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F)); // Header labels
-            this.tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F)); // Panels
-            this.tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F)); // Export button
-            this.tableLayoutPanel.Dock = DockStyle.Fill;
-            this.tableLayoutPanel.Controls.Add(this.lblGoals, 0, 0);
-            this.tableLayoutPanel.Controls.Add(this.lblCards, 1, 0);
-            this.tableLayoutPanel.Controls.Add(this.lblAttendance, 2, 0);
-            this.tableLayoutPanel.Controls.Add(this.flpGoals, 0, 1);
-            this.tableLayoutPanel.Controls.Add(this.flpCards, 1, 1);
-            this.tableLayoutPanel.Controls.Add(this.flpAttendance, 2, 1);
-            this.tableLayoutPanel.Controls.Add(this.btnExport, 1, 2);
-
+            tableLayoutPanel.ColumnCount = 3;
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.34F));
+            tableLayoutPanel.Controls.Add(lblGoals, 0, 0);
+            tableLayoutPanel.Controls.Add(lblCards, 1, 0);
+            tableLayoutPanel.Controls.Add(lblAttendance, 2, 0);
+            tableLayoutPanel.Controls.Add(flpGoals, 0, 1);
+            tableLayoutPanel.Controls.Add(flpCards, 1, 1);
+            tableLayoutPanel.Controls.Add(flpAttendance, 2, 1);
+            tableLayoutPanel.Controls.Add(btnExport, 1, 2);
+            tableLayoutPanel.Dock = DockStyle.Fill;
+            tableLayoutPanel.Location = new Point(0, 0);
+            tableLayoutPanel.Name = "tableLayoutPanel";
+            tableLayoutPanel.RowCount = 3;
+            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 25F));
+            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel.Size = new Size(1000, 700);
+            tableLayoutPanel.TabIndex = 0;
             // 
             // lblGoals
             // 
-            this.lblGoals.Text = " Golovi";
-            this.lblGoals.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblGoals.Dock = DockStyle.Fill;
-
+            lblGoals.Dock = DockStyle.Fill;
+            lblGoals.Location = new Point(3, 0);
+            lblGoals.Name = "lblGoals";
+            lblGoals.Size = new Size(327, 25);
+            lblGoals.TabIndex = 0;
+            lblGoals.Text = " Goals";
+            lblGoals.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblCards
             // 
-            this.lblCards.Text = " Žuti kartoni";
-            this.lblCards.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblCards.Dock = DockStyle.Fill;
-            this.lblCards.Click += lblCards_Click;
-
+            lblCards.Dock = DockStyle.Fill;
+            lblCards.Location = new Point(336, 0);
+            lblCards.Name = "lblCards";
+            lblCards.Size = new Size(327, 25);
+            lblCards.TabIndex = 1;
+            lblCards.Text = "Yellow cards";
+            lblCards.TextAlign = ContentAlignment.MiddleCenter;
+            lblCards.Click += lblCards_Click;
             // 
             // lblAttendance
             // 
-            this.lblAttendance.Text = " Posjetitelji";
-            this.lblAttendance.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblAttendance.Dock = DockStyle.Fill;
-            this.lblAttendance.Click += lblAttendance_Click;
-
+            lblAttendance.Dock = DockStyle.Fill;
+            lblAttendance.Location = new Point(669, 0);
+            lblAttendance.Name = "lblAttendance";
+            lblAttendance.Size = new Size(328, 25);
+            lblAttendance.TabIndex = 2;
+            lblAttendance.Text = "Attendance";
+            lblAttendance.TextAlign = ContentAlignment.MiddleCenter;
+            lblAttendance.Click += lblAttendance_Click;
             // 
             // flpGoals
             // 
-            this.flpGoals.AutoScroll = true;
-            this.flpGoals.Dock = DockStyle.Fill;
-
+            flpGoals.AutoScroll = true;
+            flpGoals.Dock = DockStyle.Fill;
+            flpGoals.Location = new Point(3, 28);
+            flpGoals.Name = "flpGoals";
+            flpGoals.Size = new Size(327, 619);
+            flpGoals.TabIndex = 3;
             // 
             // flpCards
             // 
-            this.flpCards.AutoScroll = true;
-            this.flpCards.Dock = DockStyle.Fill;
-
+            flpCards.AutoScroll = true;
+            flpCards.Dock = DockStyle.Fill;
+            flpCards.Location = new Point(336, 28);
+            flpCards.Name = "flpCards";
+            flpCards.Size = new Size(327, 619);
+            flpCards.TabIndex = 4;
             // 
             // flpAttendance
             // 
-            this.flpAttendance.AutoScroll = true;
-            this.flpAttendance.Dock = DockStyle.Fill;
-
+            flpAttendance.AutoScroll = true;
+            flpAttendance.Dock = DockStyle.Fill;
+            flpAttendance.Location = new Point(669, 28);
+            flpAttendance.Name = "flpAttendance";
+            flpAttendance.Size = new Size(328, 619);
+            flpAttendance.TabIndex = 5;
             // 
             // btnExport
             // 
-            this.btnExport.Text = "Export";
-            this.btnExport.Size = new Size(100, 30);
-            this.btnExport.Anchor = AnchorStyles.None;
-            this.btnExport.Click += btnExport_Click;
-
+            btnExport.Anchor = AnchorStyles.None;
+            btnExport.Location = new Point(449, 660);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(100, 30);
+            btnExport.TabIndex = 6;
+            btnExport.Text = "Export";
+            btnExport.Click += btnExport_Click;
             // 
             // RankingsForm
             // 
-            this.ClientSize = new Size(1000, 700);
-            this.Controls.Add(this.tableLayoutPanel);
-            this.Name = "RankingsForm";
-            this.Text = "RankingsForm";
-            this.WindowState = FormWindowState.Maximized;
-
-            this.ResumeLayout(false);
+            ClientSize = new Size(1000, 700);
+            Controls.Add(tableLayoutPanel);
+            Name = "RankingsForm";
+            Text = "RankingsForm";
+            WindowState = FormWindowState.Maximized;
+            tableLayoutPanel.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
 
